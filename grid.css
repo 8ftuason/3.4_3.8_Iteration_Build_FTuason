@@ -2,27 +2,22 @@
 heading1, heading2{
 	width: 100%;
 	display: grid;
-  grid-gap: 2%;	
-	grid-template-columns: 12% 12% 12% 12% 12% 12% 12%;
+    grid-gap: 2%;	
+	grid-template-columns: 8% 25% 12% 14% 16% 8% 8%;
 }
 
 /* style for the headings section */
 heading1{
-	background-color: #0f0;
-  border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
 	grid-template-rows: 40px;
 }
 
 /* style for the headings song details section */
 heading2{
-	grid-template-rows: 75px;
+	grid-template-rows: 75px;	
 }
 
 /* style for the headings */
 Song_ID1, Title1, Artist1, Album1, Genre1, Duration1, Size1{
-  border: 2px solid #555;
-	border-radius: 6px;
-	background-color: #999;
-	height: 20px;
 	width: 85px;
 }
