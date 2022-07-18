@@ -1,42 +1,50 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
+	 
+	<head>
+	 
+		<title>TuneIn - Home</title>
 		
-	<meta name="Author" content="Faith Tuason">
-	<meta name="Keywords" content="HTML, CSS, PHP, SQL, JavaScript">
-	<meta name="Description" content="13CSI Music Database">
-	
-	<title>Music Database</title>
+		<!-- import code needed for site to be responsive -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-	<link rel="stylesheet" href="css/style.css"/>
-			
-</head>
-
-	<!-- main webpage content starts here -->  
-  <body>
-  
-	<div class="grid-container">
-	
-	<div class="header">Header</div>
-	
-	<div class="sidebar">Sidebar</div>
-	
-	<div class="content">
-		<div class="scroll-area">
+		<!-- import keywords for search engines -->
+		<meta name="Keywords" content="html5, layout, Responsive Design"/>
+		<meta name="Author" content="Faith Tuason"/>
+		<meta name="Description" content="TuneIn Homepage"/>
 		
-		<h1><center>Login Page</center></h1>
+		<!-- import the webpage's stylesheet goes here -->
+		<link rel="stylesheet" href="css/style.css">
 		
-		<h3>Sub Heading</h3>
-		<hr></hr>
-		<p></p>
+	</head>
+	
+	<body>
+		
+		<!-- logo at top of page-->
+		<center><a href="index.php"><img style="width: 100%; max-width: 100px;" src="images/placeholder.png" alt="TuneIn logo"></a></center>	
+		
+		<!-- navigation menu (burger menu)-->
+		<?php
+		  require("nav.php");
+		?>
+		
+		<div class="banner">
+			<h1>SLIDESHOW</h1>
 		</div>
-    </div>
+		
+		<!-- This class is for my main content-->	
+		<div class="content">
+			<h1>MAIN CONTENT</h1>
+		</div>
+		
+				
+		<!-- This class is for my footer-->	
+		<div class="footer">
+			<h1>Footer</h1>
+		</div>	
+		
+	</body>
 	
-	<div class="footer">Footer</div>
-    
-	</div>
-	
-  </body>
-</html>
+</html>	
