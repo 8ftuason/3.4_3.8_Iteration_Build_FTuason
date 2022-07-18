@@ -80,6 +80,7 @@
 		  require("nav.php");
 		?>
 		
+		<!-- class for my header/banner (slideshow using js in later stages)-->
 		<div class="banner">
 			<h1>SLIDESHOW</h1>
 		</div>
