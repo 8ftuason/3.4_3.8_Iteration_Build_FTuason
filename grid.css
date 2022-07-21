@@ -3,7 +3,7 @@ heading1, heading2{
 	width: 100%;
 	display: grid;
   grid-gap: 2%;	
-	grid-template-columns: 12% 12% 12% 12% 12% 12% 12%;
+	grid-template-columns: 8% 25% 12% 14% 16% 8% 8%;
 }
 
 /* style for the headings section */
