@@ -1,3 +1,4 @@
+<!--ensures user is logged in first before accessing page-->
 <?php
 		session_start();
 		if (!isset($_SESSION['login_user'])){
@@ -26,32 +27,37 @@
 		<!-- import the webpage's stylesheet goes here -->
 		<link rel="stylesheet" href="css/style.css">
 		
+		<!-- import the webpage's javascript -->
+		<!-- nav javascript -->
+		<script src="js/nav.js" defer></script>
+		
 	</head>
 	
-	<body>
+	<body>	
 		
-		<!-- logo at top of page-->
-		<center><a href="index.php"><img style="width: 100%; max-width: 100px;" src="images/placeholder.png" alt="TuneIn logo"></a></center>	
-		
-		<!-- navigation menu (burger menu)-->
+		<!-- navigation menu-->
 		<?php
 		  require("nav.php");
 		?>
 		
-		<div class="banner">
-			<h1>SLIDESHOW</h1>
-		</div>
-		
-		<!-- This class is for my main content-->	
-		<div class="content">
-			<h1>MAIN CONTENT</h1>
-		</div>
-		
-				
-		<!-- This class is for my footer-->	
-		<div class="footer">
-			<h1>Footer</h1>
-		</div>	
+		<center>
+			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
+			<div class="banner">
+				<h1>BANNER</h1>
+			</div>
+
+			<!-- This class is for my main content-->	
+			<div style="height: 900px;" class="content">
+				<h1>MAIN CONTENT</h1>
+				<div class="scroll-trial">
+				</div>		
+			</div>
+
+			<!-- This class is for my footer-->	
+			<div class="footer">
+				<h1>Footer</h1>
+			</div>	
+		</center>
 		
 	</body>
 	
