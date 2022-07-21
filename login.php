@@ -20,7 +20,7 @@
 			if($count == 1) {
 				$_SESSION['login_user'] = $myusername;
 				header("location: index.php");
-			}else {
+			} else {
 				//error message if the user enters an invalid username or password.
 				$error = "ERROR! Invalid Userame or Password. Please Try Again";
 			} 
