@@ -20,11 +20,11 @@
 			if($count == 1) {
 				$_SESSION['login_user'] = $myusername;
 				header("location: index.php");
-			} else {
+			}else {
 				//error message if the user enters an invalid username or password.
 				$error = "ERROR! Invalid Userame or Password. Please Try Again";
-				} 
 			} 
+		} 
 	ob_end_flush();
 ?>
 
@@ -49,11 +49,19 @@
 	</head>
 	
 	<body>
+		<!-- This class is to split the content in half and places it to the left-->
+		<div class="section1">
+			<center>
+				<img style="width: 100%; max-width: 500px;" src="images/placeholder.png" alt="TuneIn logo">
+			</center>
+		</div>	
 		
+		<!-- This class is to split the content in half and places it to the right-->
+		<div class="section2">
 		<!-- This class is for my main content-->	
 		<div class="content">
 			<center>
-				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="TuneIn logo">
+				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 				<h1>LOGIN</h1>
 				<h3><form method = "post" id="login">
 				<label style="color: black;" for = 'login'>Username:</label>
@@ -65,8 +73,10 @@
 				<!-- Button for the user to press once they are ready to login -->
 				<input type = "submit" value = " Login "/><br />
 				</form></h3>
+				<!-- if the user has an invalid login this will relay the error message stored above in the '$error' php variable -->
 				<h3 class = "red"><?php echo $error; ?></h3>
 			</center>
+		</div>
 		</div>
 		
 	</body>
