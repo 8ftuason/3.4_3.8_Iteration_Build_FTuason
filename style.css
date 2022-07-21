@@ -6,180 +6,163 @@
 
 /*style for body*/
 body{
-  background-color: blue;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- overflow-x: hidden;
+	background-color: blue;
+	/* Create the parallax scrolling effect */
+ 	background-attachment: fixed;
+  	background-position: center;
+ 	background-repeat: no-repeat;
+  	background-size: cover;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 }
 
 
-/*style for burger menu starts*/
-*, *:before, *:after 
-{ box-sizing: border-box; }
-
-
-/*style for white circular background of menu*/
-label .menu {
-  position: absolute;
-  left: -100px;
-  top: -100px;
-  z-index: 100;
-  width: 200px;
-  height: 200px;
-  background: #FFF;
-  border-radius: 50% 50% 50% 50%;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
-  cursor: pointer;
-  
+/*style for nav menu starts*/
+.navbar{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
 }
 
-/*style for hamburger lines*/
-label .hamburger {
-  position: absolute;
-  top: 135px;
-  right: 50px;
-  width: 30px;
-  height: 3px;
-  background: black;
-  display: block;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+.navbar-links ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
 
-label .hamburger:after, label .hamburger:before {
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: black;
+.navbar-links li{
+	list-style: none;
 }
 
-label .hamburger:before { top: -10px; }
-
-label .hamburger:after { bottom: -10px; }
-
-label input { display: none; }
-
-/*style for close button and whitebackground of menu*/
-label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #FFF,  0 0 0 100vh #FFF;
-  border-radius: 0;
-  
+.navbar-links li a{
+	text-decoration: none;
+	padding: 1rem;
+	display: block;
 }
 
-label input:checked + .menu .hamburger {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  
+/* burger menu icon that displays on smaller screen sizes*/
+.toggle-button{
+	position: absolute;
+	top: .75rem;
+	right: 1rem;
+	display: none; /* not default so it only displays on smaller screen sizes*/
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 21px;
 }
 
-label input:checked + .menu .hamburger:after {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  bottom: 0;
-  
+.toggle-button .bar{
+	width: 100%;
+	height: 3px;
+	border-radius: 10px;
+	background-color: black;
 }
 
-label input:checked + .menu .hamburger:before {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  top: 0;
-  
+/* media query that defines what width the navbar changes into a burger menu*/
+@media (max-width: 600px){
+	.toggle-button{
+		display: flex;
+	}
+	
+	.navbar-links{
+		display: none;
+		width: 100%;
+	}
+	
+	.navbar{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.navbar-links ul{
+		width: 100%;
+		flex-direction: column;
+	}
+	
+	.navbar-links li{
+		text-align: center;
+	}
+	
+	.navbar-links.active{
+		display: flex;
+	}
 }
-
-label input:checked + .menu + ul { opacity: 1; }
-
-/* link style */
-label ul {
-  font-family: 'Lexend', sans-serif; 
-  color: black;
-  font-size: 18pt;
-  font-weight: bold;
-  letter-spacing: 0.04em;
-  z-index: 200;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  -webkit-transition: .25s 0s ease-in-out;
-  transition: .25s 0s ease-in-out;
-
-}
-
-label a {
-  margin-bottom: 1em;
-  display: block;
-  color: black;
-  text-decoration: none;
-  
-}
-
-/*style for burger menu ends*/
+/*style for nav menu ends*/
 
 /* style for image banner - used in query pages */
 .banner{
+	margin-top: -20px;
+	padding: 0;
 	background-color: grey;
-	height: 400px;
+	height: 250px;
+	width: 700px;
 	position: relative;
 }
-
 
 /* style for main content */
 .content{
 	box-sizing: border-box;
-	box-shadow: 5px 5px black;
 	background-color: white;
-	border-radius: 25px;
+	border: 10px solid black;
 	padding: 25px 25px;
 	display: block;
-	margin: 50px auto;
-	width: 100%;
-	height: 600px;
+	margin: 0 auto;
+	width: 700px;
+	height: 500px;
+	overflow: auto;
 	position: relative;
 }
 
-/* style for main content on admin pages */
-.admin_content{
+.scroll-trial{
+	height: 700px;
+}
+
+/* style for admin menu on admin pages starts*/
+.admin-menu{
+	border: 2px solid black;
+	background-color: white;
 	box-sizing: border-box;
-	box-shadow: 5px 5px black;
-	background-color: white;
-	border-radius: 25px;
-	padding: 25px 25px;
-	display: block;
-	margin: -350px 0px 50px 450px;
-	width: 100%;
-	max-width: 900px;
-	height: 300px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 700px;
+	height: 50px;
 	position: relative;
 }
 
-/* style for aside on admin pages */
-.aside{
-	box-sizing: border-box;
-	box-shadow: 5px 5px black;
-	background-color: white;
-	border-radius: 25px;
-	padding: 25px 25px;
-	display: block;
-	width: 100%;
-	margin: 50px 0px 50px;
-	max-width: 400px;
-	height: 300px;
-	position: relative;
+.admin-menu ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
 
+.admin-menu li{
+	list-style: none;
+}
+
+.admin-menu li a{
+	text-decoration: none;
+	padding: 1rem;
+	display: block;
+}
+.section1{
+	height: 100%;
+	width: 50%;
+	float: left;
+
+}
+
+.section2{
+	height: 100%;
+	width: 50%;
+	float: right;
+
+}
+/* style for admin menu on admin pages ends*/
 
 /*style for headers start*/
 h1{

@@ -1,3 +1,4 @@
+<!--ensures user is logged in first before accessing page-->
 <?php
 		session_start();
 		if (!isset($_SESSION['login_user'])){
@@ -13,7 +14,7 @@
 	 
 	<head>
 	 
-		<title>TuneIn - Query 1</title>
+		<title>TuneIn - Query 2</title>
 		
 		<!-- import code needed for site to be responsive -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,17 +28,18 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/grids.css">
 		
+		<!-- import the webpage's javascript -->
+		<!-- nav javascript -->
+		<script src="js/nav.js" defer></script>
 	</head>
 	
     <body>
-			<!-- logo at top of page-->
-			<center><a href="index.php"><img style="width: 100%; max-width: 100px;" src="images/placeholder.png" alt="TuneIn logo"></a></center>	
-
-			<!-- navigation menu (burger menu)-->
+			<!-- navigation menu -->
 			<?php
 			  require("nav.php");
 			?>
-
+		
+			<center>
 			<div class="banner">
 				<h1>IMAGE BANNER</h1>
 							<?php
@@ -64,7 +66,7 @@
 			</div>
 
 			<!-- This class is for my main content-->	
-			<div style="height: 100%;" class="content"> 
+			<div class="content"> 
 				
                         <heading1>
                                 <Song_ID1><h4>Song_ID</h4></Song_ID1>
@@ -115,6 +117,7 @@
 		<!-- This class is for my footer-->	
 		<div class="footer">
 			<h1>Footer</h1>
-		</div>   		
-        </body>
+		</div>   
+		</center>
+	</body>
 </html>
