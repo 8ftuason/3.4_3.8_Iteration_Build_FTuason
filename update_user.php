@@ -1,3 +1,4 @@
+<!--ensures user is logged in first before accessing page-->
 <?php
 		session_start();
 		if (!isset($_SESSION['login_user'])){
@@ -11,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-			<title>TuneIn - Add New User</title>
+			<title>TuneIn - Update User</title>
 		
 			<!-- import code needed for site to be responsive -->
 			<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,21 +20,20 @@
 			<!-- import keywords for search engines -->
 			<meta name="Keywords" content="html5, layout, Responsive Design"/>
 			<meta name="Author" content="Faith Tuason"/>
-			<meta name="Description" content="TuneIn Admin - Add New User Page"/>
+			<meta name="Description" content="TuneIn Admin - Update User Details Page"/>
 
-			<!-- import the webpage's stylesheet goes here -->
-			<link rel="stylesheet" href="css/style.css">
+			<!-- import the webpage's javascript -->
+			<!-- nav javascript -->
+			<script src="js/nav.js" defer></script>
 		</head>
+	
         <body>
-             <!-- logo at top of page-->
-			<center><a href="index.php"><img style="width: 100%; max-width: 100px;" src="images/placeholder.png" alt="TuneIn logo"></a></center>	
-			
-			<!-- navigation menu (burger menu)-->
+            <!-- navigation menu-->
 			<?php
 			  require("nav.php");
 			?>
-			
-								<div class="aside"><!-- holds the admin menu with links to the different pages only the admin can access -->
+			<center>
+								<div class="admin-menu"><!-- holds the admin menu with links to the different pages only the admin can access -->
 									<ul>
 										<li><a href="user_list.php">User List</a></li> 
 										<li><a href="add_user.php">Add New User</a></li>
@@ -41,9 +41,9 @@
 										<li><a href="delete_user.php">Delete User</a></li>
 									</ul>
 								</div>
+			</center>
 			
-			
-                                <div class="admin_content"><!-- holds the main content on the admin pages (different styling to other pages) -->
+                                <div class="content"><!-- Holds the main page content -->
 											<h3><form method="post" id="update_user.php"  >
 												<label style="color: black;" for = 'login'>Existing Username:</label>
 												<input type="text" name = "ExistingUserName" placeholder = "Enter Existing Username"/><br>
