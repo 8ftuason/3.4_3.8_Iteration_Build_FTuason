@@ -19,7 +19,7 @@
 		<!-- import the webpage's javascript -->
 		<!-- nav javascript -->
 		<script src="js/nav.js" defer></script>
-		<!-- nav javascript -->
+		<!-- show password javascript -->
 		<script src="js/showpword.js" defer></script>
 		
 	</head>
