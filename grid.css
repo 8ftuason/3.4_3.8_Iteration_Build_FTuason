@@ -3,7 +3,7 @@
 heading1, heading2{
 	width: 100%;
 	display: grid;
-        grid-gap: 2%;	
+    grid-gap: 2%;	
 	grid-template-columns: 4% 26% 14% 22% 10% 7% 10%;
 }
 
@@ -13,6 +13,8 @@ heading1{
     border-bottom: 1px solid #aaa;
 	grid-template-rows: 50px;
 	background-color: white;
+	position: sticky;
+	top: 0vw;
 }
 
 /* style for the headings song details section */
@@ -30,7 +32,9 @@ heading3, heading4{
 	width: 100%;
 	display: grid;
 	grid-gap: 2%;
-	grid-template-columns: 70% 30%
+	grid-template-columns: 70% 30%;
+	position: sticky;
+	top: 0vw;
 }
 
 heading3{
