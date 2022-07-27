@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
+/*makes scrolling smooth on all pages*/
+html {
+  scroll-behavior: smooth;
+}
 
 /*style for body*/
 body{
