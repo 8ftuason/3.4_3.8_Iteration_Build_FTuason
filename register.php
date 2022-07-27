@@ -25,6 +25,10 @@
 	</head>
 	
 	<body>	
+		<!-- navigation menu -->
+			<?php
+			  require("nav.php");
+			?>
 		
 		<!-- This class is for my main content-->	
 		<div class="content" style="height: 100%;">
@@ -48,6 +52,8 @@
 				<label for = 'login'>Password*</label><br />
 				<!-- input box for the user to enter their password -->
 				<input type = "password" name = "password" id="myInput" placeholder="Enter Password"/><br />
+				<!-- An element to toggle between password visibility -->
+				<input type="checkbox" onclick="myFunction()">Show Password<br /><br />
 				<!-- Button for the user to press once they are ready to login -->
 				<input type = "submit" value = "Create Account"/><br />
 				</form></h4>	
