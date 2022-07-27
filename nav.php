@@ -7,6 +7,12 @@ if(isset($_SESSION['login_user'])){
 <!-- This is for my navigation menu with links to all my pages-->
 <nav class="navbar">
 	<a href="index.php"><img style="width: 100%; max-width: 50px; margin: .5rem;" src="images/placeholder.png" alt="TuneIn logo"></a>
+	<!-- This is for when my navigation menu transitions into a burger menu for smaller screens-->
+	<a href="#" class="toggle-button">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+	</a>
 	<div class="navbar-links">
 		<ul>
 			<li><a href="index.php">Home</a></li>

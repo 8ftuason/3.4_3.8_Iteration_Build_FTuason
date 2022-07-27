@@ -29,15 +29,17 @@
 			<!-- import the webpage's javascript -->
 			<!-- nav javascript -->
 			<script src="js/nav.js" defer></script>
+			<!-- back to top button javascript -->
+			<script src="js/backtotop.js" defer></script>
 		</head>
 	
         <body>
-			<!-- navigation menu (burger menu)-->
+            <!-- navigation menu-->
 			<?php
 			  require("nav.php");
 			?>
 			
-                                <div class="content" style="padding-top: 0;"><!-- holds the main page content -->
+                                <div class="admin-content" style="padding-top: 0; overflow-y: auto;"><!-- holds the main page content -->
 								<heading3><!-- This class is to split the content in half and places the usernames to the left-->
 									<User1><h4>USERNAME</h4></User1>
 									<Password1><h4>PASSWORD</h4></Password1>
@@ -69,6 +71,7 @@
                      <!-- This class is for my footer-->	
 					<div class="footer">
 						<h1>Footer</h1>
+						<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 					</div>
 			
         </body>

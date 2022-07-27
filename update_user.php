@@ -28,6 +28,8 @@
 			<!-- import the webpage's javascript -->
 			<!-- nav javascript -->
 			<script src="js/nav.js" defer></script>
+			<!-- back to top button javascript -->
+			<script src="js/backtotop.js" defer></script>
 		</head>
 	
         <body>
@@ -35,38 +37,43 @@
 			<?php
 			  require("nav.php");
 			?>
+				
 			
-                                <div class="content"><!-- holds the main content on the admin pages (different styling to other pages) -->
-											<h3><form method="post" id="update_user.php"  >
-												<label style="color: black;" for = 'login'>Existing Username:</label>
-												<input type="text" name = "ExistingUserName" placeholder = "Enter Existing Username"/><br>
-												<label style="color: black;" for = 'login'>New Username:</label>
-												<input type="text" name = "NewUserName" placeholder = "Enter New Username"/><br>
-												<input type="submit" value="Update" />
-											</form></h3>
+                                <div class="admin-content"><!-- Holds the main page content -->
+									<?php
+										//connect.php (tells where to connect servername, username, password, dbaseName)
+										require "3.3_Assessment_FTuason_mysqli.php";
 
-											<?php
-												//connect.php (tells where to connect servername, username, password, dbaseName)
-												require "3.3_Assessment_FTuason_mysqli.php";
-						
-												$ExistingUserID = isset($_POST["ExistingUserName"]) ? $_POST["ExistingUserName"] : '';
-												$NewUserID = isset($_POST["NewUserName"]) ? $_POST["NewUserName"] : '';
+										$ExistingUserID = isset($_POST["ExistingUserName"]) ? $_POST["ExistingUserName"] : '';
+										$NewUserID = isset($_POST["NewUserName"]) ? $_POST["NewUserName"] : '';
 
-												//creates a variable to store sql code for the 'update users' query which will update the user's details (username and password) in my Users table in phpMyAdmin
-												$updatequery = "UPDATE Users SET User_PK = '$NewUserID' WHERE User_PK = '$ExistingUserID'";
-									
-												if (mysqli_query($conn,$updatequery)) {
-													echo "<h3>User Updated</h3>";
-												} else {
-													echo "<h3>Error Updating User Details. Please Try Again.</h3> ";
-												}
-											?>
-											
+										//creates a variable to store sql code for the 'update users' query which will update the user's details (username and password) in my Users table in phpMyAdmin
+										$updatequery = "UPDATE Users SET User_PK = '$NewUserID' WHERE User_PK = '$ExistingUserID'";
+									?>
+									<center>
+										<h1>UPDATE USER DETAILS</h1>
+										<h3><form method="post" id="update_user.php"  >
+											<label for = 'login'>Existing Username*</label><br>
+											<input type="text" name = "ExistingUserName" placeholder = "Enter Existing Username"/><br>
+											<label for = 'login'>New Username*</label><br>
+											<input type="text" name = "NewUserName" placeholder = "Enter New Username"/><br>
+											<input type="submit" value="Update" />
+										</form></h3>
+
+										<?php
+											if (mysqli_query($conn,$updatequery)){
+												echo "<h3>User Details Successfully Updated</h3>";
+											} else {
+												$error = "Error Updating User Details. Please Try Again.";
+											}
+										?>
+									</center>		
 								</div>
                                 
                     <!-- This class is for my footer-->	
 					<div class="footer">
 						<h1>Footer</h1>
+						<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 					</div>    
                     
         </body>

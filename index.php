@@ -27,36 +27,44 @@
 		<!-- import the webpage's stylesheet goes here -->
 		<link rel="stylesheet" href="css/style.css">
 		
+		<!-- import the webpage's javascript -->
+		<!-- nav javascript -->
+		<script src="js/nav.js" defer></script>
+		<!-- back to top button javascript -->
+		<script src="js/backtotop.js" defer></script>
+		
 	</head>
 	
-	<body>
+	<body>	
 		
-		<!-- navigation menu (burger menu)-->
+		<!-- navigation menu-->
 		<?php
 		  require("nav.php");
 		?>
+		
 		<center>
-		<div class="banner">
-			<h1>BANNER</h1>
-		</div>
+			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
+			<div class="banner">
+				<h1>BANNER</h1>
+			</div>
+
+			<!-- This class is for my main content-->	
+			<div class="content" style="height: 100%;">
+				<img style="width: 100%; max-width: 400px; max-height: 200px; padding: 25px;" src="images/placeholder.png" alt="Query 1">
+				<img style="width: 100%; max-width: 400px; max-height: 200px; padding: 25px;" src="images/placeholder.png" alt="Query 2"><br>
+				
+				<img style="width: 100%; max-width: 235px; padding: 32px;" src="images/placeholder.png" alt="Genre">
+				<img style="width: 100%; max-width: 235px; padding: 32px;" src="images/placeholder.png" alt="Genre">
+				<img style="width: 100%; max-width: 235px; padding: 32px;" src="images/placeholder.png" alt="Genre">
+						
+			</div>
+
+			<!-- This class is for my footer-->	
+			<div class="footer">
+				<h1>Footer</h1>
+				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+			</div>	
 		</center>
-		
-		<!-- This class is for my main content-->	
-		<div class="content">
-			<center>
-			    <img style="width: 100%; max-width: 250px; padding: 50px;" src="images/placeholder.png">
-			    <img style="width: 100%; max-width: 250px; padding: 50px;" src="images/placeholder.png"><br>
-				
-				  <img style="width: 100%; max-width: 250px; padding: 50px;" src="images/placeholder.png">
-			    <img style="width: 100%; max-width: 250px; padding: 50px;" src="images/placeholder.png">
-			</center>		
-		</div>
-		
-				
-		<!-- This class is for my footer-->	
-		<div class="footer">
-			<h1>Footer</h1>
-		</div>	
 		
 	</body>
 	

@@ -19,7 +19,7 @@
 		<!-- import the webpage's javascript -->
 		<!-- nav javascript -->
 		<script src="js/nav.js" defer></script>
-		<!-- nav javascript -->
+		<!-- show password javascript -->
 		<script src="js/showpword.js" defer></script>
 		
 	</head>
@@ -31,7 +31,7 @@
 			?>
 		
 		<!-- This class is for my main content-->	
-		<div class="content" style="height: 100%;">
+		<div class="admin-content" style="height: 100%;">
 			<?php
 					//connect.php (tells where to connect servername, username, password, dbaseName)
 					require "3.3_Assessment_FTuason_mysqli.php";
