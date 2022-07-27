@@ -36,12 +36,11 @@
 	</head>
 	
     <body>
-			<!-- navigation menu (burger menu)-->
+			<!-- navigation menu -->
 			<?php
 			  require("nav.php");
 			?>
-
-			<center>
+		
 			<div class="banner">
 				<h1>IMAGE BANNER</h1>
 							<?php
@@ -66,12 +65,12 @@
 								}
 							?>
 			</div>
-			</center>
+
 			<!-- This class is for my main content-->	
 			<div class="content"> 
 				
                         <heading1>
-                                <Song_ID1><h4>Song_ID</h4></Song_ID1>
+                                <Song_ID1 style="padding-left: 5px;"><h4>#</h4></Song_ID1>
                                 <Title1><h4>Title</h4></Title1>
 							    <Artist1><h4>Artist</h4></Artist1>
                                 <Album1><h4>Album</h4></Album1>
@@ -102,7 +101,7 @@
 								<!--php is above. HTML is below. Used to output the query results-->
 
 							<heading2>
-								<Song_ID2><p><?php echo $output['Song_ID']; ?></p></Song_ID2>
+								<Song_ID2 style="padding-left: 5px;"><p><?php echo $output['Song_ID']; ?></p></Song_ID2>
 								<Title2><p><?php echo $output['Title']; ?></p></Title2>
 								<Artist2><p><?php echo $output['Artist']; ?></p></Artist2>
 								<Album2><p><?php echo $output['Album']; ?></p></Album2>
@@ -119,6 +118,7 @@
 		<!-- This class is for my footer-->	
 		<div class="footer">
 			<h1>Footer</h1>
+			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 		</div>   
 	</body>
 </html>
