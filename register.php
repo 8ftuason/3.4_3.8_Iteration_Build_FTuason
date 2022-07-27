@@ -31,7 +31,7 @@
 			?>
 		
 		<!-- This class is for my main content-->	
-		<div class="content" style="height: 100%;">
+		<div class="admin-content" style="height: 100%;">
 			<?php
 					//connect.php (tells where to connect servername, username, password, dbaseName)
 					require "3.3_Assessment_FTuason_mysqli.php";
