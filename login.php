@@ -26,8 +26,8 @@
 			} else {
 				//error message if the user enters an invalid username or password.
 				$error = "ERROR! Invalid Userame or Password. Please Try Again";
-				} 
 			} 
+		} 
 	ob_end_flush();
 ?>
 
@@ -49,20 +49,23 @@
 		<!-- import the webpage's stylesheet goes here -->
 		<link rel="stylesheet" href="css/style.css">
 		
+		<!-- import the webpage's javascript -->
+		<!-- nav javascript -->
+		<script src="js/nav.js" defer></script>
 		<!-- show password javascript -->
 		<script src="js/showpword.js" defer></script>
 		
 	</head>
 	
-	<body>
-		<!-- navigation menu -->
-			<?php
-			  require("nav.php");
-			?>
+	<body>	
 		
+		<!-- navigation menu-->
+		<?php
+		  require("nav.php");
+		?>
+
 		<!-- This class is for my main content-->	
-		<!-- This class is for my main content-->	
-		<div class="content" style="height: 100%;">
+		<div class="admin-content" style="height: 100%;">
 			<center>
 				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 				<h1>LOGIN</h1>
