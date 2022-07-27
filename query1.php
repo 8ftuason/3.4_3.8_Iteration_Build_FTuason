@@ -31,8 +31,6 @@
 		<!-- import the webpage's javascript -->
 		<!-- nav javascript -->
 		<script src="js/nav.js" defer></script>
-		<!-- back to top button javascript -->
-		<script src="js/backtotop.js" defer></script>
 	</head>
 	
     <body>
@@ -40,12 +38,10 @@
 			<?php
 			  require("nav.php");
 			?>
-			
-			<!-- logo at top of page-->
-			<center><a href="index.php"><img style="width: 100%; max-width: 100px;" src="images/placeholder.png" alt="TuneIn logo"></a></center>	
-			
+			<center>
 			<div class="banner">
 				<h1>IMAGE BANNER</h1>
+			
 				
 							<?php
 								//connect.php (tells where to connect servername, username, password, dbaseName)
@@ -70,9 +66,10 @@
 								?>
 
 			</div>
+			</center>
 
 			<!-- This class is for my main content-->	
-			<div style="height: 100%;" class="content"> 
+			<div class="content"> 
 				
                         <heading1>
                                 <Song_ID1><h4>Song_ID</h4></Song_ID1>
@@ -123,7 +120,6 @@
 		<!-- This class is for my footer-->	
 		<div class="footer">
 			<h1>Footer</h1>
-			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 		</div>
         </body>
 </html>
