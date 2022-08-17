@@ -28,31 +28,16 @@
 			<!-- import the webpage's javascript -->
 			<!-- nav javascript -->
 			<script src="js/nav.js" defer></script>
-			<!-- back to top button javascript -->
-			<script src="js/backtotop.js" defer></script>
 			</head>
 	
 	
         <body>
-            <!-- logo at top of page-->
-			<center><a href="index.php"><img style="width: 100%; max-width: 100px;" src="images/placeholder.png" alt="TuneIn logo"></a></center>	
-			
-			<!-- navigation menu (burger menu)-->
+            <!-- navigation menu (burger menu)-->
 			<?php
 			  require("nav.php");
 			?>
 			
-								<div class="aside"><!-- holds the admin menu with links to the different pages only the admin can access -->
-									<ul>
-										<li><a href="user_list.php">User List</a></li> 
-										<li><a href="add_user.php">Add New User</a></li>
-										<li><a href="update_user.php">Update User</a></li>
-										<li><a href="delete_user.php">Delete User</a></li>
-									</ul>
-								</div>
-			
-			
-                                <div class="admin_content"><!-- holds the main content on the admin pages (different styling to other pages) -->
+                                <div class="content"><!-- holds the main content on the admin pages (different styling to other pages) -->
 									
 										<h3><form method="post" id="add_user.php">
 											<label style="color: black;" for = 'login'>Username:</label>
@@ -84,7 +69,6 @@
                 <!-- This class is for my footer-->	
 				<div class="footer">
 					<h1>Footer</h1>
-					<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 				</div>
                             
         </body>

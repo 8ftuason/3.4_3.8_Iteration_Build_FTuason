@@ -20,6 +20,9 @@
 			if($count == 1) {
 				$_SESSION['login_user'] = $myusername;
 				header("location: index.php");
+			} 
+			if($myusername == "Graeme") {
+				header("location: user_list.php");
 			} else {
 				//error message if the user enters an invalid username or password.
 				$error = "ERROR! Invalid Userame or Password. Please Try Again";
@@ -46,14 +49,22 @@
 		<!-- import the webpage's stylesheet goes here -->
 		<link rel="stylesheet" href="css/style.css">
 		
+		<!-- show password javascript -->
+		<script src="js/showpword.js" defer></script>
+		
 	</head>
 	
 	<body>
+		<!-- navigation menu -->
+			<?php
+			  require("nav.php");
+			?>
 		
 		<!-- This class is for my main content-->	
-		<div class="content">
+		<!-- This class is for my main content-->	
+		<div class="content" style="height: 100%;">
 			<center>
-				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="TuneIn logo">
+				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 				<h1>LOGIN</h1>
 				<h4><form method = "post" id="login">
 				<label for = 'login'>Username*</label><br />
@@ -62,6 +73,8 @@
 				<label for = 'login'>Password*</label><br />
 				<!-- input box for the user to enter their password -->
 				<input type = "password" name = "password" id="myInput" placeholder="Enter Password"/><br />
+				<!-- An element to toggle between password visibility -->
+				<input type="checkbox" onclick="myFunction()">Show Password<br /><br />
 				<!-- Button for the user to press once they are ready to login -->
 				<input type = "submit" value = "Login"/><br />
 				</form></h4>
