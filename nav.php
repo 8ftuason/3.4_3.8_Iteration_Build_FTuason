@@ -15,25 +15,25 @@ if(isset($_SESSION['login_user'])){
 	</a>
 	<div class="navbar-links">
 		<ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href>Playlists</a>
+			<li class="hover-underline-animation"><a href="index.php">Home</a></li>
+			<li class="hover-underline-animation"><a href>Playlists</a>
 				<ul>
-					<li><a href="query1.php">Query 1</a></li>
-					<li><a href="query2.php">Query 2</a></li>
+					<li class="hover-underline-animation"><a href="query1.php">Query 1</a></li>
+					<li class="hover-underline-animation"><a href="query2.php">Query 2</a></li>
 				</ul>
 				<?php
 					//if the admin logs in (Graeme) then it the nav will show an additional link to the admin settings pages
                     if ($_SESSION["login_user"] == "Graeme"){
-                    	echo"<li><a href>Admin Settings</a>
+                    	echo"<li class='hover-underline-animation'><a href>Admin Settings</a>
 							<ul>
-								<li><a href='user_list.php'>User List</a></li> 
-								<li><a href='add_user.php'>Add New User</a></li>
-								<li><a href='update_user.php'>Update User</a></li>
-								<li><a href='delete_user.php'>Delete User</a></li>
+								<li class='hover-underline-animation'><a href='user_list.php'>User List</a></li> 
+								<li class='hover-underline-animation'><a href='add_user.php'>Add New User</a></li>
+								<li class='hover-underline-animation'><a href='update_user.php'>Update User</a></li>
+								<li class='hover-underline-animation'><a href='delete_user.php'>Delete User</a></li>
 							</ul>
 						</li>";
                     }?>
-			<li><a href='logout.php'>Logout</a></li>
+			<li class="hover-underline-animation"><a href='logout.php'>Logout</a></li>
 		</ul>
 	</div>
 </nav> 
@@ -51,8 +51,8 @@ if(isset($_SESSION['login_user'])){
 	</a>
 	<div class="navbar-links">
 		<ul>
-			<li><a href="login.php">Login</a></li>
-			<li><a href="register.php">Sign Up</a></li> 
+			<li class="hover-underline-animation"><a href="login.php">Login</a></li>
+			<li class="hover-underline-animation"><a href="register.php">Sign Up</a></li> 
 		</ul>
 	</div>
 </nav>
