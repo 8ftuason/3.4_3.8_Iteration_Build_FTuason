@@ -33,7 +33,7 @@
 			<script src="js/backtotop.js" defer></script>
 		</head>
 	
-        <body>
+        <body style="background-color: #1155CC;">
             <!-- navigation menu-->
 			<?php
 			  require("nav.php");
@@ -41,8 +41,8 @@
 			
                                 <div class="admin-content" style="padding-top: 0; overflow-y: auto;"><!-- holds the main page content -->
 								<heading3><!-- This class is to split the content in half and places the usernames to the left-->
-									<User1><h4>USERNAME</h4></User1>
-									<Password1><h4>PASSWORD</h4></Password1>
+									<User1><h2 style="color: black;">USERNAME</h2></User1>
+									<Password1><h2 style="color: black;">PASSWORD</h2></Password1>
 								</heading3>
 									
 										<?php
@@ -68,11 +68,6 @@
 										?>
                         		</div>
 			
-                     <!-- This class is for my footer-->	
-					<div class="footer">
-						<h1>Footer</h1>
-						<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-					</div>
 			
         </body>
 </html>
