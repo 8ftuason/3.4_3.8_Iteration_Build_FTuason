@@ -1,17 +1,15 @@
 /*these are my fonts for my text imported from google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 
-/*makes scrolling smooth on all pages*/
 html {
   scroll-behavior: smooth;
 }
 
 /*style for body*/
 body{
-	background-color: blue;
+	background-color: white;
 	/* Create the parallax scrolling effect */
  	background-attachment: fixed;
   	background-position: center;
@@ -50,7 +48,7 @@ body{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
+	background-color: #1155CC;
 	position: sticky;
 	top: 0vw;
 	z-index: 1; /* for overlapping divs, bringing to the front like a drop down menu */
@@ -70,6 +68,9 @@ body{
 	text-decoration: none;
 	padding: 1rem;
 	display: block;
+	color: black;
+	font-family: 'Lexend', sans-serif;
+	font-weight: 400;
 }
 
 .navbar-links ul li ul {
@@ -83,17 +84,40 @@ body{
 }
 
 .navbar-links ul li ul li { 
-  background-color: white; /* this is the drop-down menu background color */
+  background-color: #1155CC; /* this is the drop-down menu background color */
   display: block; 
 }
 
-.navbar-links ul li ul li:hover { background: #242423;} /* this is the drop-down menu hover on blocks */
+.navbar-links ul li ul li:hover { background: #1155CC;} /* this is the drop-down menu hover on blocks */
 
 .navbar-links ul li:hover ul {
   display: block;
   visibility: visible; /* this makes the drop-down menu visable*/
 }
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #527ECC;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 /* burger menu icon that displays on smaller screen sizes*/
 .toggle-button{
 	position: absolute;
@@ -148,11 +172,12 @@ body{
 		display: flex;
 	}
 }
+
 /*style for nav menu ends*/
 
 /* style for image banner - used in query pages */
 .banner{
-	margin-top: -25px;
+	margin-top: -23px;
 	padding: 0;
 	background-color: grey;
 	height: 600px;
@@ -205,34 +230,34 @@ input[type=checkbox]{
   bottom: 5px; /* Place the button at the bottom of the page */
   right: 5px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
-  background-color: red; /* Set a background color */
+  background-color:  #527ECC; /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
+  border: none;
+  border-radius: 10px;
 }
 
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+  opacity: 0.8;
 }
 
 /*style for headers start*/
 h1{
-	font-family: 'Lexend', sans-serif;
+	font-family: 'Leckerli One', cursive;
 	font-weight: 600;
 	color: black;
-	font-size: 24pt;
+	font-size: 2.35vw;
 	letter-spacing: 0.24em;
 	text-align: center;
 }	
 
 h2{
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Leckerli One', cursive;
 	font-weight: 600;
-	color: #0086AD;
-	font-size: 16pt;
-	letter-spacing: 0.05em;
-	line-height: 0.2em;
-	text-align: center;
+	color: white;
+	font-size: 1.8vw;
 }	
 
 
@@ -248,17 +273,47 @@ h3{
 
 /*style for my paragraphs*/
 p{
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Lexend', sans-serif;
 	font-weight: 400;
 	color: black;
-	font-size: 11pt;
+	font-size: 1.1vw;
 	letter-spacing: 0.01em;
 }
 
 
 /*style for footer*/
 .footer{
+	display: grid;
+	grid-template-columns: 20vw 20vw 20vw 25vw 15vw;
+	grid-template-rows: 44vh;
+	padding-top: 90px;
 	position: relative;
-	background-color: white;
-	height: 275px;
+	background-color: #1155CC;
+}
+
+.footer1{
+	box-sizing: border-box;
+	padding: 0 20px;
+	width: 100%;
+	height: 28vh;
+	grid-row: 1;
+	grid-column: 2;
+}
+
+.footer2{
+	box-sizing: border-box;
+	padding: 0 20px;
+	width: 100%;
+	height: 28vh;
+	grid-row: 1;
+	grid-column: 3;
+}
+
+.footer3{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+	height: 28vh;
+	grid-row: 1;
+	grid-column: 4;
 }
