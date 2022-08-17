@@ -41,8 +41,9 @@
 			  require("nav.php");
 			?>
 			
-			<div class="banner">
-				<h1>IMAGE BANNER</h1>
+			<center><div class="banner">
+				<h1 style="padding-top: 200px;">QUERY 1</h1>
+				<h2>All Songs sorted by Title and Artist(s) Z-A</h2>
 				
 							<?php
 								//connect.php (tells where to connect servername, username, password, dbaseName)
@@ -59,39 +60,43 @@
 								{	
 								?>
 								<!--php is above. HTML is below. Used to output the query results-->
-								<p><?php echo $output['Total_Time']; ?></p>
+								<center><p><?php echo $output['Total_Time']; ?></p></center>
 				
 								<?php
 								//closes the output while loop
 								}
 								?>
-			</div>
+			</div></center>
 
 			<!-- This class is for my main content-->	
 			<div class="content"> 
 				
                         <heading1>
-                                <Song_ID1 style="padding-left: 5px;"><h4>#</h4></Song_ID1>
-                                <Title1><h4>Title</h4></Title1>
-							    <Artist1><h4>Artist</h4></Artist1>
-                                <Album1><h4>Album</h4></Album1>
-								<Genre1><h4>Genre</h4></Genre1>
-								<Duration1><h4>Duration</h4></Duration1>
-                                <Size1><h4>Size</h4></Size1>
+                                <Song_ID1 style="padding-left: 5px;"><h2>#</h2></Song_ID1>
+                                <Title1><h2>Title</h2></Title1>
+							    <Artist1><h2>Artist</h2></Artist1>
+                                <Album1><h2>Album</h2></Album1>
+								<Genre1><h2>Genre</h2></Genre1>
+								<Duration1><h2>Duration</h2></Duration1>
+                                <Size1><h2>Size</h2></Size1>
                         </heading1>            
 				
                         	<?php
 								require "3.3_Assessment_FTuason_mysqli.php";
 					
 								//creates a variable to store the sql query that displayed all song info sorted by title then artist (both highest first)
-								$query = ("SELECT s.Song_ID, s.Title, s.Duration, s.Size, a.Album, r.Artist, g.Genre
+								$query = ("SELECT s.Song_ID, s.Title, s.Duration, s.Size,
+								GROUP_CONCAT(DISTINCT a.Album SEPARATOR ', ') AS Album,
+								GROUP_CONCAT(DISTINCT r.Artist SEPARATOR ', ') AS Artist,
+								GROUP_CONCAT(DISTINCT g.Genre SEPARATOR ', ') AS Genre
 								FROM Song_Details AS s 
 								INNER JOIN Album a ON s.Album_PK = a.Album_PK
 								JOIN SongToArtist j ON s.Song_ID = j.Song_ID
 								JOIN Artist r ON r.Artist_PK = j.Artist_PK
 								JOIN SongToGenre t ON s.Song_ID = t.Song_ID
 								JOIN Genre g ON g.Genre_PK = t.Genre_PK
-								ORDER BY s.Title DESC, r.Artist DESC");
+								GROUP BY s.Song_ID
+								ORDER BY Title DESC, Artist DESC");
 					
 								//runs and stores the query using the variables $con (see nav.php) and $query
 								$result = mysqli_query($conn,$query);
@@ -117,9 +122,22 @@
 				 
 			</div>
 		<!-- This class is for my footer-->	
-		<div class="footer">
-			<h1>Footer</h1>
-			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-		</div>
+		<center>
+			<div class="footer">
+				<div class="footer1">
+					<h2 style="text-align: left; font-size: 1.8vw;">AUTHORS NOTE</h2>
+					<h3 style="text-align: left; font-size: 1.3vw;">© Faith Tuason, <br>Tawa College 2022, <br>all rights reserved.</h3>
+				</div>
+				<div class="footer2">
+					<img style="width: 100%; max-width: 7.3vw; padding-top: 35px;" src="images/placeholder.png" alt="logo">
+				</div>
+				<div class="footer3">
+					<img style="width: 100%; max-width: 3.65vw; padding-top: 60px;" src="images/placeholder.png" alt="Social Media Icon">
+					<img style="width: 100%; max-width: 3.65vw; padding-top: 60px; padding-left: 25px;" src="images/placeholder.png" alt="Social Media Icon">
+					<img style="width: 100%; max-width: 3.65vw; padding-top: 60px; padding-left: 25px;" src="images/placeholder.png" alt="Social Media Icon">
+				</div>
+				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+			</div>	
+		</center>
         </body>
 </html>

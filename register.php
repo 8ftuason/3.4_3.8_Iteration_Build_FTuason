@@ -24,7 +24,7 @@
 		
 	</head>
 	
-	<body>	
+	<body style="background-color: #1155CC;">	
 		<!-- navigation menu -->
 			<?php
 			  require("nav.php");
@@ -45,7 +45,7 @@
 			<center>
 				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 				<h1>REGISTER</h1>
-				<h4><form method = "post" id="add_user">
+				<h3><form method = "post" id="add_user">
 				<label for = 'login'>Username*</label><br />
 				<!-- input box for the user to enter their username -->
 				<input type = "text" name = "username" placeholder="Enter Username"/><br />
@@ -56,7 +56,7 @@
 				<input type="checkbox" onclick="myFunction()">Show Password<br /><br />
 				<!-- Button for the user to press once they are ready to login -->
 				<input type = "submit" value = "Create Account"/><br />
-				</form></h4>	
+				</form></h3>	
 				<?php
 					//lets the admin know the status of the action; whether or not the user was successfully added or they have to try again.
 					if (mysqli_query($conn,$insertquery)) {

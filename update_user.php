@@ -32,7 +32,7 @@
 			<script src="js/backtotop.js" defer></script>
 		</head>
 	
-        <body>
+        <body style="background-color: #1155CC;">
             <!-- navigation menu-->
 			<?php
 			  require("nav.php");
@@ -69,12 +69,7 @@
 										?>
 									</center>		
 								</div>
-                                
-                    <!-- This class is for my footer-->	
-					<div class="footer">
-						<h1>Footer</h1>
-						<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-					</div>    
+                       
                     
         </body>
 </html>
