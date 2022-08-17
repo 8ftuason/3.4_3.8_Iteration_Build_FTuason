@@ -57,7 +57,7 @@
 		
 	</head>
 	
-	<body>	
+	<body style="background-color: #1155CC;">	
 		
 		<!-- navigation menu-->
 		<?php
@@ -69,7 +69,7 @@
 			<center>
 				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 				<h1>LOGIN</h1>
-				<h4><form method = "post" id="login">
+				<h3><form method = "post" id="login">
 				<label for = 'login'>Username*</label><br />
 				<!-- input box for the user to enter their username -->
 				<input type = "text" name = "username" placeholder="Enter Username"/><br />
@@ -80,7 +80,7 @@
 				<input type="checkbox" onclick="myFunction()">Show Password<br /><br />
 				<!-- Button for the user to press once they are ready to login -->
 				<input type = "submit" value = "Login"/><br />
-				</form></h4>
+				</form></h3>
 				<!-- if the user has an invalid login this will relay the error message stored above in the '$error' php variable -->
 				<h3><?php echo $error; ?></h3>
 				
