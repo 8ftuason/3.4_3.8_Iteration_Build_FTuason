@@ -60,7 +60,7 @@
 								{	
 								?>
 								<!--php is above. HTML is below. Used to output the query results-->
-								<center><p><?php echo $output['Total_Time']; ?></p></center>
+								<center><h3><?php echo $output['Total_Time']; ?></h3></center>
 				
 								<?php
 								//closes the output while loop
@@ -72,13 +72,13 @@
 			<div class="content"> 
 				
                         <heading1>
-                                <Song_ID1 style="padding-left: 5px;"><h2>#</h2></Song_ID1>
-                                <Title1><h2>Title</h2></Title1>
-							    <Artist1><h2>Artist</h2></Artist1>
-                                <Album1><h2>Album</h2></Album1>
-								<Genre1><h2>Genre</h2></Genre1>
-								<Duration1><h2>Duration</h2></Duration1>
-                                <Size1><h2>Size</h2></Size1>
+                                <Song_ID1 style="padding-right: 120px;"><h3 style="color: white;">#</h3></Song_ID1>
+                                <Title1><h3 style="color: white;">Title</h3></Title1>
+							    <Artist1><h3 style="color: white;">Artist</h3></Artist1>
+                                <Album1><h3 style="color: white;">Album</h3></Album1>
+								<Genre1><h3 style="color: white;">Genre</h3></Genre1>
+								<Duration1><h3 style="color: white;">Secs</h3></Duration1>
+                                <Size1><h3 style="color: white;">Size</h3></Size1>
                         </heading1>            
 				
                         	<?php
@@ -107,7 +107,7 @@
 				
 								<!--php is above. HTML is below. Used to output the query results-->
 								<heading2>
-									<Song_ID2 style="padding-left: 5px;"><p><?php echo $output['Song_ID']; ?></p></Song_ID2>
+									<Song_ID2 style="padding-left: 0.4vw;"><p><?php echo $output['Song_ID']; ?></p></Song_ID2>
 									<Title2><p><?php echo $output['Title']; ?></p></Title2>
 									<Artist2><p><?php echo $output['Artist']; ?></p></Artist2>
 									<Album2><p><?php echo $output['Album']; ?></p></Album2>
@@ -125,16 +125,15 @@
 		<center>
 			<div class="footer">
 				<div class="footer1">
-					<h2 style="text-align: left; font-size: 1.8vw;">AUTHORS NOTE</h2>
-					<h3 style="text-align: left; font-size: 1.3vw;">© Faith Tuason, <br>Tawa College 2022, <br>all rights reserved.</h3>
+					<h3 style="padding-top: 2.5vw; text-align: left; font-size: 1.3vw; color: white;">© Faith Tuason, <br>Tawa College 2022, <br>all rights reserved.</h3>
 				</div>
 				<div class="footer2">
-					<img style="width: 100%; max-width: 7.3vw; padding-top: 35px;" src="images/placeholder.png" alt="logo">
+					<img style="width: 100%; max-width: 7.3vw; padding-top: 2.5vw;" src="images/placeholder.png" alt="logo">
 				</div>
 				<div class="footer3">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 60px;" src="images/placeholder.png" alt="Social Media Icon">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 60px; padding-left: 25px;" src="images/placeholder.png" alt="Social Media Icon">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 60px; padding-left: 25px;" src="images/placeholder.png" alt="Social Media Icon">
+					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
+					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
+					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
 				</div>
 				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 			</div>	
