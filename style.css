@@ -1,7 +1,5 @@
 /*these are my fonts for my text imported from google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -9,7 +7,7 @@ html {
 
 /*style for body*/
 body{
-	background-color: white;
+	background-color: #292a33;
 	/* Create the parallax scrolling effect */
  	background-attachment: fixed;
   	background-position: center;
@@ -33,14 +31,13 @@ body{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #527ECC; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #1155CC; 
 }
-/*style for custom scrollbar ends*/
 
 /*style for nav menu starts*/
 .navbar{
@@ -48,7 +45,9 @@ body{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #1155CC;
+	background-image: linear-gradient(#1155CC, #527ECC);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
 	position: sticky;
 	top: 0vw;
 	z-index: 1; /* for overlapping divs, bringing to the front like a drop down menu */
@@ -68,9 +67,9 @@ body{
 	text-decoration: none;
 	padding: 1rem;
 	display: block;
-	color: black;
-	font-family: 'Lexend', sans-serif;
-	font-weight: 400;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 }
 
 .navbar-links ul li ul {
@@ -84,40 +83,18 @@ body{
 }
 
 .navbar-links ul li ul li { 
-  background-color: #1155CC; /* this is the drop-down menu background color */
+  background-color: #527ECC; /* this is the drop-down menu background color */
   display: block; 
 }
-
-.navbar-links ul li ul li:hover { background: #1155CC;} /* this is the drop-down menu hover on blocks */
 
 .navbar-links ul li:hover ul {
   display: block;
   visibility: visible; /* this makes the drop-down menu visable*/
 }
 
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
-}
+a:link {color:#ffffff;} /* unvisited link */
+a:hover {text-shadow: 0 0 10px #292a33;} /* mouse over link */
 
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #527ECC;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
 /* burger menu icon that displays on smaller screen sizes*/
 .toggle-button{
 	position: absolute;
@@ -135,7 +112,7 @@ body{
 	width: 100%;
 	height: 3px;
 	border-radius: 10px;
-	background-color: black;
+	background-color: white;
 }
 
 /* media query that defines what width the navbar changes into a burger menu*/
@@ -177,7 +154,7 @@ body{
 
 /* style for image banner - used in query pages */
 .banner{
-	margin-top: -23px;
+	margin-top: -3.2vw;
 	padding: 0;
 	background-color: grey;
 	height: 600px;
@@ -189,14 +166,13 @@ body{
 /* style for main content */
 .content{
 	box-sizing: border-box;
-	background-color: white;
+	background-color: #292a33;
 	padding: 0 20px;
 	display: block;
 	margin: 15px auto;
 	width: 100%;
 	max-width: 955px;
 	height: 575px;
-	border-radius: 5px;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -207,20 +183,93 @@ body{
 	margin: 100px auto;
 	position: relative;
 	background-color: white;
-	padding: 20px;
+	padding: 25px;
 	display: block;
 	max-width: 555px;
 	width: 100%;
-	height: 400px;
+	height: 100%;
 	border-radius: 5px;
 }
 
-/* custom style for cursor type on buttons*/
-input[type=submit]{
+/* custom style for input boxes start*/
+input{
+	border: none; 
+	border-bottom: 0.25vw solid #527ECC;
+	padding: 0.4vw 0.6vw;
+	width: 12vw;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.2vw;
+	outline-width: 0;
+}
+
+input[type=password] {
+  	border: none; 
+	border-bottom: 0.25vw solid #527ECC;
+	outline-width: 0;
+	width: 12vw;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.2vw;
+}
+
+input[type=checkbox] {
+	width: 1vw;
+	height: 1vw;
 	cursor: pointer;
 }
-input[type=checkbox]{
+
+input[type=submit] {
+	background-color: #1155CC;
+  	border: none;
+  	color: white;
+  	text-decoration: none;
+	width: 22vw;
+  	cursor: pointer;
+	font-size: 1.2vw;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 5px;
 	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #3d9c46;
+	transition: 0.2s ease-in-out;
+}
+/* custom style for input boxes end*/
+
+
+/*style for headers start*/
+h1{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: white;
+	font-size: 2.35vw;
+	text-align: center;
+	color: #1155CC; 
+	text-shadow: 5px 5px #4a78c9;
+}	
+
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: white;
+	font-size: 1.8vw;
+}	
+
+
+h3{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: #1155CC;
+	font-size: 1.4vw;
+}	
+/*style for headers ends*/
+
+/*style for my paragraphs*/
+p{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: white;
+	font-size: 1.1vw;
 }
 
 /* style for back to top button*/
@@ -230,12 +279,12 @@ input[type=checkbox]{
   bottom: 5px; /* Place the button at the bottom of the page */
   right: 5px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
-  background-color:  #527ECC; /* Set a background color */
-  color: white; /* Text color */
+  background-color:  white; 
+  color: #527ECC; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #myBtn:hover {
@@ -243,52 +292,14 @@ input[type=checkbox]{
   opacity: 0.8;
 }
 
-/*style for headers start*/
-h1{
-	font-family: 'Leckerli One', cursive;
-	font-weight: 600;
-	color: black;
-	font-size: 2.35vw;
-	letter-spacing: 0.24em;
-	text-align: center;
-}	
-
-h2{
-	font-family: 'Leckerli One', cursive;
-	font-weight: 600;
-	color: white;
-	font-size: 1.8vw;
-}	
-
-
-h3{
-	font-family: 'Lexend', sans-serif;
-	font-weight: 600;
-	color: black;
-	font-size: 14pt;
-	letter-spacing: 0.04em;
-	text-align: center;
-}	
-/*style for headers ends*/
-
-/*style for my paragraphs*/
-p{
-	font-family: 'Lexend', sans-serif;
-	font-weight: 400;
-	color: black;
-	font-size: 1.1vw;
-	letter-spacing: 0.01em;
-}
-
-
 /*style for footer*/
 .footer{
 	display: grid;
 	grid-template-columns: 20vw 20vw 20vw 25vw 15vw;
 	grid-template-rows: 44vh;
-	padding-top: 90px;
+	padding-top: 7.5vw;
 	position: relative;
-	background-color: #1155CC;
+	background-image: linear-gradient(#527ECC, #1155CC);
 }
 
 .footer1{
