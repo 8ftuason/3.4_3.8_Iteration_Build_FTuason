@@ -35,7 +35,7 @@
 			</head>
 	
 	
-        <bodys>
+        <body>
             <!-- navigation menu-->
 			<?php
 			  require("nav.php");
