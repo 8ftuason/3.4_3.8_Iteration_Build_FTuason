@@ -4,34 +4,33 @@ heading1, heading2{
 	width: 100%;
 	display: grid;
     grid-gap: 2%;	
-	grid-template-columns: 4% 24% 14% 22% 11% 8% 10%;
+	grid-template-columns: 4% 24% 14% 22% 11% 7% 11%;
 }
 
 /* style for the headings section */
 heading1{
 	padding: 0;
-    border-bottom: 1px solid #aaa;
-	grid-template-rows: 50px;
-	background-color: #527ECC;
+    border-bottom: 1px solid white;
+	grid-template-rows: 100%;
+	background-color: #292a33;	
+  	text-align: center;
 	position: sticky;
 	top: 0vw;
 }
 
 /* style for the headings song details section */
 heading2{
-	grid-template-rows: 80px;
+	grid-template-rows: 100%;
+}
+/* style for the headings song details section */
+heading2:hover{ 
+	background: #527ECC;
+	border-radius: 5px;
 }
 
 /* style for the headings */
 Song_ID1, Title1, Artist1, Album1, Genre1, Duration1, Size1{
-	width: 85px;
-}
-
-heading2:nth-child(even) {
-background: #CCC;
-}
-heading2:nth-child(odd) {
-background: white;
+	width: 1.5vw;
 }
 
 /* style for grid layout for user list query output */
@@ -44,25 +43,24 @@ heading3, heading4{
 
 heading3{
 	padding: 0;
-	background-color: #527ECC;
-	border-bottom: 1px solid #aaa;
-	grid-template-rows: 50px;
+    border-bottom: 1px solid white;
+	grid-template-rows: 100%;
+	background-color: #292a33;	
+  	text-align: center;
 	position: sticky;
 	top: 0vw;
 }
 
 heading4{
-	grid-template-rows: 50px;
+	grid-template-rows: 100%;
 }
 
-heading4:nth-child(even) {
-background: #CCC;
-}
-heading4:nth-child(odd) {
-background: #FFF;
+heading4:hover{ 
+	background: #527ECC;
+	border-radius: 5px;
 }
 
 
 User1, Password1{
-	width: 50px;
+	width: 3.6vw;
 }

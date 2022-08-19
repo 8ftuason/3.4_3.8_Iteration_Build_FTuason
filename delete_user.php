@@ -32,7 +32,7 @@
 			<script src="js/backtotop.js" defer></script>
 		</head>
 	
-        <body style="background-color: #1155CC;">
+        <body>
             <!-- navigation menu-->
 			<?php
 			  require("nav.php");
@@ -49,18 +49,19 @@
 										$deletequery = "DELETE FROM Users WHERE User_PK = '$UserID'";
 									?>
 									<center>
+										<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 										<h1>DELETE USER DETAILS</h1>
                                         <h3><form method = "post" id = "delete_user.php" >
-											<label style="color: black;" for = 'login'>Username*</label><br>
-											<input type="text" name = "UserName" placeholder="Enter Username"/><br>
+											<label for = 'login'>Username*</label>
+											<input type="text" name = "UserName" placeholder="Enter Username"/><br><br>
 											<input type="submit" value="Delete" />
 										</form></h3>
 										<?php
 											//lets the admin know the status of the action; whether or not the user was successfully deleted or they have to try again.
 											if (mysqli_query($conn,$deletequery)){
-												echo "<h3>User Deleted<h3>";
+												echo "<p style='color: green; font-weight: 700;'>User Successfully Deleted</p>";
 											} else {
-												$error = "<h3>Error deleting user. Please Try Again.<h3>";
+												$error = "<p style='color: red; font-weight: 700;'>ERROR! Unable to delete user. <br> Please Try Again.</p>";
 											}
 										?>
 									</center>

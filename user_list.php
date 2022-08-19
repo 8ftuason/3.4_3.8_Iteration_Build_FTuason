@@ -33,16 +33,17 @@
 			<script src="js/backtotop.js" defer></script>
 		</head>
 	
-        <body style="background-color: #1155CC;">
+        <body>
             <!-- navigation menu-->
 			<?php
 			  require("nav.php");
 			?>
 			
-                                <div class="admin-content" style="padding-top: 0; overflow-y: auto;"><!-- holds the main page content -->
+                                <div class="admin-content" style="background-color: #292a33; padding: 0; height: 350px; overflow-y: auto; 
+	overflow-x: hidden;"><!-- holds the main page content -->
 								<heading3><!-- This class is to split the content in half and places the usernames to the left-->
-									<User1><h2 style="color: black;">USERNAME</h2></User1>
-									<Password1><h2 style="color: black;">PASSWORD</h2></Password1>
+									<User1><h3 style="color: white;">USERNAME</h3></User1>
+									<Password1><h3 style="color: white;">PASSWORD</h3></Password1>
 								</heading3>
 									
 										<?php
@@ -59,7 +60,7 @@
 										{
 										?>
 										<heading4><!-- This class is to split the content in half and places the passwords to the right-->
-											<User2 style="padding-left: 5px;"><p><?php echo $output['User_PK']; ?></p></User2>
+											<User2 style="padding-left: 0.36vw;"><p><?php echo $output['User_PK']; ?></p></User2>
 											<Password2><p><?php echo $output['Password']; ?></p></Password2>
 										</heading4>
 										<?php

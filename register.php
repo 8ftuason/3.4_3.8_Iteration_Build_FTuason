@@ -24,14 +24,14 @@
 		
 	</head>
 	
-	<body style="background-color: #1155CC;">	
+	<body>	
 		<!-- navigation menu -->
 			<?php
 			  require("nav.php");
 			?>
 		
 		<!-- This class is for my main content-->	
-		<div class="admin-content" style="height: 100%;">
+		<div class="admin-content">
 			<?php
 					//connect.php (tells where to connect servername, username, password, dbaseName)
 					require "3.3_Assessment_FTuason_mysqli.php";
@@ -46,26 +46,27 @@
 				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 				<h1>REGISTER</h1>
 				<h3><form method = "post" id="add_user">
-				<label for = 'login'>Username*</label><br />
+				<label for="username">Username*</label>
 				<!-- input box for the user to enter their username -->
-				<input type = "text" name = "username" placeholder="Enter Username"/><br />
-				<label for = 'login'>Password*</label><br />
+				<input type = "text" name = "username"  autocomplete="off" placeholder="Enter Username"/><br /><br />
+				<label for = 'password'>Password*</label>
 				<!-- input box for the user to enter their password -->
 				<input type = "password" name = "password" id="myInput" placeholder="Enter Password"/><br />
 				<!-- An element to toggle between password visibility -->
-				<input type="checkbox" onclick="myFunction()">Show Password<br /><br />
+				<input type="checkbox" onclick="myFunction()"><p style="display: inline-block; color: #527ECC;">Show Password</p><br />
 				<!-- Button for the user to press once they are ready to login -->
 				<input type = "submit" value = "Create Account"/><br />
-				</form></h3>	
+				</form></h3>
+				
 				<?php
 					//lets the admin know the status of the action; whether or not the user was successfully added or they have to try again.
 					if (mysqli_query($conn,$insertquery)) {
-						echo "<h3>New User Successfully Registered</h3>";
+						echo "<p style='color: green; font-weight: 700;'>New User Successfully Registered</p>";
 					} else {
-						$error = "ERROR! Unable to register user. Please Try Again";
+						$error = "<p style='color: red; font-weight: 700;'>ERROR! Unable to register user. <br> Please Try Again.</p>";
 					}
 				?>
-				<p><a href='login.php'>Back to Login</a></p>
+				<p><a style="color: #1155CC;" href='login.php'>Back to Login</a></p>
 			</center>			
 			
 		</div>
