@@ -32,7 +32,7 @@
 			<script src="js/backtotop.js" defer></script>
 		</head>
 	
-        <body style="background-color: #1155CC;">
+        <body>
             <!-- navigation menu-->
 			<?php
 			  require("nav.php");
@@ -51,20 +51,21 @@
 										$updatequery = "UPDATE Users SET User_PK = '$NewUserID' WHERE User_PK = '$ExistingUserID'";
 									?>
 									<center>
+										<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 										<h1>UPDATE USER DETAILS</h1>
 										<h3><form method="post" id="update_user.php"  >
-											<label for = 'login'>Existing Username*</label><br>
+											<label for = 'login'>Existing Username*</label>
 											<input type="text" name = "ExistingUserName" placeholder = "Enter Existing Username"/><br>
-											<label for = 'login'>New Username*</label><br>
-											<input type="text" name = "NewUserName" placeholder = "Enter New Username"/><br>
+											<label for = 'login'>New Username*</label>
+											<input type="text" name = "NewUserName" placeholder = "Enter New Username"/><br><br>
 											<input type="submit" value="Update" />
 										</form></h3>
 
 										<?php
-											if (mysqli_query($conn,$updatequery)){
-												echo "<h3>User Details Successfully Updated</h3>";
+											if (mysqli_query($conn,$updatequery)) {
+												echo "<p style='color: green; font-weight: 700;'>User Details Successfully Updated</p>";
 											} else {
-												$error = "Error Updating User Details. Please Try Again.";
+												$error = "<p style='color: red; font-weight: 700;'>ERROR! Unable to update user details. <br> Please Try Again.</p>";
 											}
 										?>
 									</center>		
