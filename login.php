@@ -25,7 +25,7 @@
 				header("location: user_list.php");
 			} else {
 				//error message if the user enters an invalid username or password.
-				$error = "ERROR! Invalid Userame or Password. Please Try Again";
+				$error = "ERROR! Invalid Userame or Password.<br> Please Try Again.";
 			} 
 		} 
 	ob_end_flush();
@@ -57,7 +57,7 @@
 		
 	</head>
 	
-	<body style="background-color: #1155CC;">	
+	<body>	
 		
 		<!-- navigation menu-->
 		<?php
@@ -65,26 +65,26 @@
 		?>
 
 		<!-- This class is for my main content-->	
-		<div class="admin-content" style="height: 100%;">
+		<div class="admin-content">
 			<center>
 				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 				<h1>LOGIN</h1>
 				<h3><form method = "post" id="login">
-				<label for = 'login'>Username*</label><br />
+				<label for="username">Username*</label>
 				<!-- input box for the user to enter their username -->
-				<input type = "text" name = "username" placeholder="Enter Username"/><br />
-				<label for = 'login'>Password*</label><br />
+				<input type = "text" name = "username"  autocomplete="off" placeholder="Enter Username"/><br /><br />
+				<label for = 'password'>Password*</label>
 				<!-- input box for the user to enter their password -->
 				<input type = "password" name = "password" id="myInput" placeholder="Enter Password"/><br />
 				<!-- An element to toggle between password visibility -->
-				<input type="checkbox" onclick="myFunction()">Show Password<br /><br />
+				<input type="checkbox" onclick="myFunction()"><p style="display: inline-block; color: #527ECC;">Show Password</p><br />
 				<!-- Button for the user to press once they are ready to login -->
 				<input type = "submit" value = "Login"/><br />
 				</form></h3>
 				<!-- if the user has an invalid login this will relay the error message stored above in the '$error' php variable -->
-				<h3><?php echo $error; ?></h3>
+				<p style="color: red; font-weight: 700;"><?php echo $error; ?></p>
 				
-				<p><a href='register.php'>Don't have an account?</a></p>
+				<p><a style="color: #1155CC;" href='register.php'>Don't have an account?</a></p>
 			</center>
 		</div>
 		
