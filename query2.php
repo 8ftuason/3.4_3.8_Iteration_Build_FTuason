@@ -14,7 +14,7 @@
 	 
 	<head>
 	 
-		<title>TuneIn - Query 2</title>
+		<title>TuneIn | Query 2</title>
 		
 		<!-- import code needed for site to be responsive -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,10 +40,12 @@
 			<?php
 			  require("nav.php");
 			?>
-		
+			
+			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
 			<center><div class="banner">
-				<h1 style="padding-top: 200px;">QUERY 2</h1>
-				<h2>All Songs sorted by Genre and  Artist(s) A - Z</h2>
+				<h1 style="padding-top: 14vw; font-size: 4.8vw; color: white;">QUERY 2</h1>
+				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">All Songs sorted by Genre and  Artist(s) A - Z</h2>
+				
 				
 							<?php
 								//connect.php (tells where to connect servername, username, password, dbaseName)
@@ -71,15 +73,16 @@
 			<!-- This class is for my main content-->	
 			<div class="content"> 
 				
+						<!-- Playlist headings-->
                         <heading1>
                                 <Song_ID1 style="padding-right: 120px;"><h3 style="color: white;">#</h3></Song_ID1>
-                                <Title1><h3 style="color: white;">Title</h3></Title1>
-							    <Artist1><h3 style="color: white;">Artist</h3></Artist1>
-                                <Album1><h3 style="color: white;">Album</h3></Album1>
-								<Genre1><h3 style="color: white;">Genre</h3></Genre1>
-								<Duration1><h3 style="color: white;">Secs</h3></Duration1>
-                                <Size1><h3 style="color: white;">Size</h3></Size1>
-                        </heading1>              
+                                <Title1><h3>TITLE</h3></Title1>
+							    <Artist1><h3>ARTIST</h3></Artist1>
+                                <Album1><h3>ALBUM</h3></Album1>
+								<Genre1><h3>GENRE</h3></Genre1>
+								<Duration1><h3>SECS</h3></Duration1>
+                                <Size1><h3>SIZE</h3></Size1>
+						</heading1>            
 				
                         	<?php
 								require "3.3_Assessment_FTuason_mysqli.php";
@@ -120,22 +123,27 @@
 								?>
 				 
 			</div>
-		<!-- This class is for my footer-->	
+			
 		<center>
+			<!-- This class is for my footer-->	
 			<div class="footer">
+				<!--Copyright statement-->
 				<div class="footer1">
-					<h3 style="padding-top: 2.5vw; text-align: left; font-size: 1.3vw; color: white;">© Faith Tuason, <br>Tawa College 2022, <br>all rights reserved.</h3>
+					<h3 style="padding-top: 2.5vw; text-align: left; color: white;">© Faith Tuason, <br>Tawa College 2022, <br>all rights reserved.</h3>
 				</div>
+				<!--Logo-->
 				<div class="footer2">
 					<img style="width: 100%; max-width: 7.3vw; padding-top: 2.5vw;" src="images/placeholder.png" alt="logo">
 				</div>
+				<!--Social Media Icons-->
 				<div class="footer3">
 					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
 					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
 					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
 				</div>
+				<!--Back to top button-->
 				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-			</div>	
+			</div>
 		</center>
 	</body>
 </html>
