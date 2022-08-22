@@ -69,22 +69,21 @@
 			<center>
 				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 				<h1>LOGIN</h1>
-				<h3><form method = "post" id="login">
-				<label for="username">Username*</label>
+				<form method = "post" id="login">
 				<!-- input box for the user to enter their username -->
-				<input type = "text" name = "username"  autocomplete="off" placeholder="Enter Username"/><br /><br />
-				<label for = 'password'>Password*</label>
+				<input type = "text" name = "username"  autocomplete="off" placeholder="Username"/><br /><br />
 				<!-- input box for the user to enter their password -->
-				<input type = "password" name = "password" id="myInput" placeholder="Enter Password"/><br />
+				<input type = "password" name = "password" id="myInput" placeholder="Password"/><br />
 				<!-- An element to toggle between password visibility -->
-				<input type="checkbox" onclick="myFunction()"><p style="display: inline-block; color: #527ECC;">Show Password</p><br />
+				<input type="checkbox" onclick="myFunction()"><p style="font-size: 0.8vw; display: inline-block; color: #527ECC;">Show Password</p><br /><br />
 				<!-- Button for the user to press once they are ready to login -->
 				<input type = "submit" value = "Login"/><br />
-				</form></h3>
+				</form>
 				<!-- if the user has an invalid login this will relay the error message stored above in the '$error' php variable -->
-				<p style="color: red; font-weight: 700;"><?php echo $error; ?></p>
+				<p style="color: #F73F3F; font-weight: 700;"><?php echo $error; ?></p>
 				
-				<p><a style="color: #1155CC;" href='register.php'>Don't have an account?</a></p>
+				<!--Takes user to register if they don't have an account -->
+				<p><a class="hover-underline-animation2" style="color: #1155CC; text-decoration: none;" href='register.php'>Don't have an account?</a></p>
 			</center>
 		</div>
 		
