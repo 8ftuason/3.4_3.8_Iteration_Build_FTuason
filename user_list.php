@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-			<title>TuneIn - User List</title>
+			<title>TuneIn | User List</title>
 		
 			<!-- import code needed for site to be responsive -->
 			<meta name="viewport" content="width=device-width, initial-scale=1">
