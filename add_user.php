@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-			<title>TuneIn - Add New User</title>
+			<title>TuneIn | Add New User</title>
 		
 			<!-- import code needed for site to be responsive -->
 			<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,27 +55,26 @@
 									<center>
 										<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 										<h1>ADD USER</h1>
-										<h3><form method = "post" id="add_user">
-										<label for="username">Username*</label>
+										<form method = "post" id="add_user">
 										<!-- input box for the user to enter their username -->
-										<input type = "text" name = "username"  autocomplete="off" placeholder="Enter Username"/><br /><br />
-										<label for = 'password'>Password*</label>
+										<input type = "text" name = "username"  autocomplete="off" placeholder="Username"/><br /><br />
 										<!-- input box for the user to enter their password -->
-										<input type = "password" name = "password" id="myInput" placeholder="Enter Password"/><br />
+										<input type = "password" name = "password" id="myInput" placeholder="Password"/><br />
 										<!-- An element to toggle between password visibility -->
-										<input type="checkbox" onclick="myFunction()"><p style="display: inline-block; color: #527ECC;">Show Password</p><br />
+										<input type="checkbox" onclick="myFunction()"><p style="font-size: 0.8vw; display: inline-block; color: #527ECC;">Show Password</p><br /><br />
 										<!-- Button for the user to press once they are ready to login -->
 										<input type = "submit" value = "Create Account"/><br />
-										</form></h3>
-										
+										</form>
+
 										<?php
 											//lets the admin know the status of the action; whether or not the user was successfully added or they have to try again.
 											if (mysqli_query($conn,$insertquery)) {
-												echo "<p style='color: green; font-weight: 700;'>New User Successfully Registered</p>";
+												echo "<p style='color: #3d9c46; font-weight: 700;'>New User Successfully Registered</p>";
 											} else {
-												$error = "<p style='color: red; font-weight: 700;'>ERROR! Unable to register user. <br> Please Try Again.</p>";
+												$error = "<p style='color: #F73F3F; font-weight: 700;'>ERROR! Unable to register user. <br> Please Try Again.</p>";
 											}
 										?>
+
 									</center>
 								</div>
                                 

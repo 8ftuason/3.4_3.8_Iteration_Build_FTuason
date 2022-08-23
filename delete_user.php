@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-			<title>TuneIn - Delete User</title>
+			<title>TuneIn | Delete User</title>
 		
 			<!-- import code needed for site to be responsive -->
 			<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,17 +51,18 @@
 									<center>
 										<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 										<h1>DELETE USER DETAILS</h1>
-                                        <h3><form method = "post" id = "delete_user.php" >
-											<label for = 'login'>Username*</label>
+                                        <form method = "post" id = "delete_user.php" >
+											<!-- input box for Graeme to enter the username he wishes to delete-->
 											<input type="text" name = "UserName" placeholder="Enter Username"/><br><br>
+											<!-- Button for him to press once the is ready to complete his action -->
 											<input type="submit" value="Delete" />
-										</form></h3>
+										</form>
 										<?php
 											//lets the admin know the status of the action; whether or not the user was successfully deleted or they have to try again.
 											if (mysqli_query($conn,$deletequery)){
-												echo "<p style='color: green; font-weight: 700;'>User Successfully Deleted</p>";
+												echo "<p style='color: #3d9c46; font-weight: 700;'>User Successfully Deleted</p>";
 											} else {
-												$error = "<p style='color: red; font-weight: 700;'>ERROR! Unable to delete user. <br> Please Try Again.</p>";
+												$error = "<p style='color: #F73F3F; font-weight: 700;'>ERROR! Unable to delete user. <br> Please Try Again.</p>";
 											}
 										?>
 									</center>

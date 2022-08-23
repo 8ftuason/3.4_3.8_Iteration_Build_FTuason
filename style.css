@@ -1,6 +1,7 @@
 /*these are my fonts for my text imported from google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+/*used so user has smooth scrolling when back to top button is used*/
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +9,7 @@ html {
 /*style for body*/
 body{
 	background-color: #292a33;
-	/* Create the parallax scrolling effect */
+	/* Create the parallax scrolling effect (for background image)*/
  	background-attachment: fixed;
   	background-position: center;
  	background-repeat: no-repeat;
@@ -18,25 +19,8 @@ body{
 	padding: 0;
 }
 
-/*style for custom scrollbar starts*/
-/* width */
 ::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #527ECC; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #1155CC; 
+    display: none;
 }
 
 /*style for nav menu starts*/
@@ -67,7 +51,7 @@ body{
 	text-decoration: none;
 	padding: 1rem;
 	display: block;
-	color: white;
+	color: #ffffff;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 }
@@ -93,7 +77,32 @@ body{
 }
 
 a:link {color:#ffffff;} /* unvisited link */
-a:hover {text-shadow: 0 0 10px #292a33;} /* mouse over link */
+a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
+
+/*underline animation when user hovers over nav links*/
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 /* burger menu icon that displays on smaller screen sizes*/
 .toggle-button{
@@ -112,7 +121,7 @@ a:hover {text-shadow: 0 0 10px #292a33;} /* mouse over link */
 	width: 100%;
 	height: 3px;
 	border-radius: 10px;
-	background-color: white;
+	background-color: #ffffff;
 }
 
 /* media query that defines what width the navbar changes into a burger menu*/
@@ -149,10 +158,9 @@ a:hover {text-shadow: 0 0 10px #292a33;} /* mouse over link */
 		display: flex;
 	}
 }
-
 /*style for nav menu ends*/
 
-/* style for image banner - used in query pages */
+/* style for image banner - used in home and query playlist pages */
 .banner{
 	margin-top: -3.2vw;
 	padding: 0;
@@ -172,7 +180,7 @@ a:hover {text-shadow: 0 0 10px #292a33;} /* mouse over link */
 	margin: 15px auto;
 	width: 100%;
 	max-width: 955px;
-	height: 575px;
+	height: 75.95vh;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -182,7 +190,7 @@ a:hover {text-shadow: 0 0 10px #292a33;} /* mouse over link */
 	box-sizing: border-box;
 	margin: 100px auto;
 	position: relative;
-	background-color: white;
+	background-color: #ffffff;
 	padding: 25px;
 	display: block;
 	max-width: 555px;
@@ -196,9 +204,11 @@ input{
 	border: none; 
 	border-bottom: 0.25vw solid #527ECC;
 	padding: 0.4vw 0.6vw;
-	width: 12vw;
+	width: 20.5vw;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.2vw;
+	font-weight: 600;
+	color: #1155CC; 
 	outline-width: 0;
 }
 
@@ -206,17 +216,35 @@ input[type=password] {
   	border: none; 
 	border-bottom: 0.25vw solid #527ECC;
 	outline-width: 0;
-	width: 12vw;
+	width: 20.5vw;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.2vw;
+	font-weight: 600;
+	color: #1155CC; 
 }
 
+/* changes the input styling when clicked by the user. */
+input:focus {
+  	outline-width: 0;
+	border-bottom: 0.25vw solid #1155CC;
+	transition: 1s ease-in-out;
+}
+
+/* style for placeholder text in entry/input boxes */
+::placeholder {
+  color: #292a33;
+  opacity: 80%
+}
+
+/* style for show password checkbox*/
 input[type=checkbox] {
 	width: 1vw;
 	height: 1vw;
 	cursor: pointer;
+	margin-left: -14vw;
 }
 
+/* style for submit buttons on login/register and admin pages*/
 input[type=submit] {
 	background-color: #1155CC;
   	border: none;
@@ -231,27 +259,52 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-	background-color: #3d9c46;
+	background-color: #527ECC;
 	transition: 0.2s ease-in-out;
 }
 /* custom style for input boxes end*/
 
+/*underline animation when user hovers over other links not in nav*/
+.hover-underline-animation2 {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation2:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #527ECC;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation2:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 /*style for headers start*/
 h1{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
-	color: white;
+	color: #ffffff;
 	font-size: 2.35vw;
 	text-align: center;
 	color: #1155CC; 
-	text-shadow: 5px 5px #4a78c9;
+	letter-spacing: 0.05em;
+	text-shadow: 0.15vw 0.15vw 0.15vw #4a78c9;
 }	
 
 h2{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
-	color: white;
+	color: #ffffff;
 	font-size: 1.8vw;
 }	
 
@@ -259,7 +312,7 @@ h2{
 h3{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
-	color: #1155CC;
+	color: #ffffff;
 	font-size: 1.4vw;
 }	
 /*style for headers ends*/
@@ -268,7 +321,7 @@ h3{
 p{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
-	color: white;
+	color: #ffffff;
 	font-size: 1.1vw;
 }
 
@@ -292,7 +345,7 @@ p{
   opacity: 0.8;
 }
 
-/*style for footer*/
+/*style for footer starts*/
 .footer{
 	display: grid;
 	grid-template-columns: 20vw 20vw 20vw 25vw 15vw;
@@ -302,6 +355,7 @@ p{
 	background-image: linear-gradient(#527ECC, #1155CC);
 }
 
+/*for copyright section*/
 .footer1{
 	box-sizing: border-box;
 	padding: 0 20px;
@@ -311,6 +365,7 @@ p{
 	grid-column: 2;
 }
 
+/*for logo section*/
 .footer2{
 	box-sizing: border-box;
 	padding: 0 20px;
@@ -320,6 +375,7 @@ p{
 	grid-column: 3;
 }
 
+/*for social media icons section*/
 .footer3{
 	box-sizing: border-box;
 	display: inline-block;
@@ -328,3 +384,4 @@ p{
 	grid-row: 1;
 	grid-column: 4;
 }
+/*style for footer ends*/

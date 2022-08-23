@@ -1,4 +1,4 @@
-/* style for grid layout for playlist query output */
+/* style for grid layout for playlist query output starts */
 /* style for grid layout for both the headings and song details */
 heading1, heading2{
 	width: 100%;
@@ -10,57 +10,79 @@ heading1, heading2{
 /* style for the headings section */
 heading1{
 	padding: 0;
-    border-bottom: 1px solid white;
+    border-bottom: 0.2vw solid #ffffff;
 	grid-template-rows: 100%;
 	background-color: #292a33;	
   	text-align: center;
 	position: sticky;
 	top: 0vw;
+    box-shadow: 0 10px 6px -6px #18191f;
 }
 
-/* style for the headings song details section */
-heading2{
-	grid-template-rows: 100%;
-}
-/* style for the headings song details section */
-heading2:hover{ 
-	background: #527ECC;
-	border-radius: 5px;
-}
-
-/* style for the headings */
 Song_ID1, Title1, Artist1, Album1, Genre1, Duration1, Size1{
 	width: 1.5vw;
 }
 
-/* style for grid layout for user list query output */
+/* style for the song output section */
+heading2{
+	grid-template-rows: 100%;
+	border-bottom: 0.05vw solid #ffffff;
+}
+
+/* style for the odd and even rows of the query output for the playlists */
+heading2:nth-child(even) {
+	background: #18191f;
+}
+heading2:nth-child(odd) {
+	background: #292a33;
+}
+
+/* style for the hover of each song*/
+heading2:hover{ 
+	background: #527ECC;
+}
+/* style for grid layout for playlist query output ends */
+
+/* style for grid layout for user list query output starts */
 heading3, heading4{
 	width: 100%;
 	display: grid;
-	grid-gap: 2%;
+    grid-gap: 2%;	
 	grid-template-columns: 70% 30%;
 }
 
+/* style for the headings section */
 heading3{
 	padding: 0;
-    border-bottom: 1px solid white;
+    border-bottom: 0.2vw solid #ffffff;
 	grid-template-rows: 100%;
 	background-color: #292a33;	
   	text-align: center;
 	position: sticky;
 	top: 0vw;
+    box-shadow: 0 10px 6px -6px #18191f;
 }
-
-heading4{
-	grid-template-rows: 100%;
-}
-
-heading4:hover{ 
-	background: #527ECC;
-	border-radius: 5px;
-}
-
 
 User1, Password1{
 	width: 3.6vw;
 }
+
+/* style for the headings song details section */
+heading4{
+	grid-template-rows: 100%;
+	border-bottom: 0.05vw solid #ffffff;
+}
+
+/* style for the odd and even rows of the query output for the user details */
+heading4:nth-child(even) {
+	background: #18191f;
+}
+heading4:nth-child(odd) {
+	background: #292a33;
+}
+
+/* style for the hover of each user details*/
+heading4:hover{ 
+	background: #527ECC;
+}
+/* style for grid layout for user list query output ends */

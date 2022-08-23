@@ -53,19 +53,20 @@
 									<center>
 										<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
 										<h1>UPDATE USER DETAILS</h1>
-										<h3><form method="post" id="update_user.php"  >
-											<label for = 'login'>Existing Username*</label>
-											<input type="text" name = "ExistingUserName" placeholder = "Enter Existing Username"/><br>
-											<label for = 'login'>New Username*</label>
-											<input type="text" name = "NewUserName" placeholder = "Enter New Username"/><br><br>
+										<form method="post" id="update_user.php">
+											<!-- input box for the user to enter their exsisting username -->
+											<input type="text" name = "ExistingUserName" placeholder = "Existing Username"/><br><br>
+											<!-- input box for the user to enter their new username -->
+											<input type="text" name = "NewUserName" placeholder = "New Username"/><br><br><br>
+											<!-- Button for the user to press once they are ready to update their details -->
 											<input type="submit" value="Update" />
-										</form></h3>
+										</form>
 
 										<?php
 											if (mysqli_query($conn,$updatequery)) {
-												echo "<p style='color: green; font-weight: 700;'>User Details Successfully Updated</p>";
+												echo "<p style='color: #3d9c46; font-weight: 700;'>User Details Successfully Updated</p>";
 											} else {
-												$error = "<p style='color: red; font-weight: 700;'>ERROR! Unable to update user details. <br> Please Try Again.</p>";
+												$error = "<p style='color: #F73F3F; font-weight: 700;'>ERROR! Unable to update user details. <br> Please Try Again.</p>";
 											}
 										?>
 									</center>		
