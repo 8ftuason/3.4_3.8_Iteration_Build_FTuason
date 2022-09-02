@@ -24,6 +24,9 @@
 		<meta name="Author" content="Faith Tuason"/>
 		<meta name="Description" content="TuneIn Homepage"/>
 		
+		<!-- favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		
 		<!-- import the webpage's stylesheet goes here -->
 		<link rel="stylesheet" href="css/style.css">
 		
@@ -44,22 +47,56 @@
 		
 		<center>
 			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
-			<div class="banner">
-				<h1 style="padding-top: 14vw; font-size: 4.8vw; color: white;">Discover new music.</h1>
-				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">Tune in to your favourite songs by your favourite artists today.</h2>
+			<div class="banner" style="background-image: url('images/query1.jpg'); background-size: 100vw 95.77vh">
+				<h1 style="padding-top: 35vh; font-size: 4.8vw; color: white;">Discover new music.</h1>
+				<h2 style="margin-top: -2.64vh; font-size: 1.75vw;">Tune in to your favourite songs by your favourite artists today</h2>
 			</div>
 
 			<!-- This class is for my main content-->	
 			<div class="content" style="height: 100%;">
 				<!-- All users 'saved playlists' (will be linked images in later stages)-->
 				<h1 style="color: white;">Your Library</h1>
-				<img style="width: 100%; max-width: 400px; max-height: 200px; padding: 25px;" src="images/placeholder.png" alt="Query 1">
-				<img style="width: 100%; max-width: 400px; max-height: 200px; padding: 25px;" src="images/placeholder.png" alt="Query 2"><br>
+				<div class="container" style="margin: 25px;">
+					<div class="overlay"></div>
+					<a href = "query1.php"><img class="library-image" src="images/allsongs.jpg" alt="Query 1">
+					<div class="centered">
+						<h1 style="color: white; text-shadow: none;">QUERY 1</h1>
+					</div></a>
+				</div>
+				
+				<div class="container" style="margin: 25px;">
+					<div class="overlay"></div>
+					<a href = "query2.php"><img class="library-image" src="images/allsongs.jpg" alt="Query 2">
+					<div class="centered">
+						<h1 style="color: white; text-shadow: none;">QUERY 2</h1>
+					</div></a>
+				</div>
+				
 				<!-- Recommended Genres (will be linked images in later stages)-->
 				<h1 style="color: white;">Genres</h1>
-				<img style="width: 100%; max-width: 235px; padding: 32px;" src="images/placeholder.png" alt="Genre">
-				<img style="width: 100%; max-width: 235px; padding: 32px;" src="images/placeholder.png" alt="Genre">
-				<img style="width: 100%; max-width: 235px; padding: 32px;" src="images/placeholder.png" alt="Genre">
+				<div class="container" style="margin: 32px;">
+					<div class="overlay"></div>
+					<a href = "rock.php"><img class="genre-image" src="images/rock.jpg" alt="Rock Genre">
+					<div class="centered">
+						<h1 style="color: white; text-shadow: none;">ROCK</h1>
+					</div></a>
+				</div>
+				
+				<div class="container" style="margin: 32px;">
+					<div class="overlay"></div>
+					<a href = "country.php"><img class="genre-image" src="images/country.jpg" alt="Country Genre">
+					<div class="centered">
+						<h1 style="color: white; text-shadow: none;">COUNTRY</h1>
+					</div></a>
+				</div>
+				
+				<div class="container" style="margin: 32px;">
+					<div class="overlay"></div>
+					<a href = "pop.php"><img class="genre-image" src="images/pop.jpg" alt="Pop Genre">
+					<div class="centered">
+						<h1 style="color: white; text-shadow: none;">POP</h1>
+					</div></a>
+				</div>
 						
 			</div>
 
@@ -67,20 +104,20 @@
 			<div class="footer">
 				<!--Copyright statement-->
 				<div class="footer1">
-					<h3 style="padding-top: 2.5vw; text-align: left; color: white;">© Faith Tuason, <br>Tawa College 2022, <br>all rights reserved.</h3>
+					<h3 style="padding-top: 2.5vw; text-align: left; color: white;">© Faith Tuason, <br>Tawa College 2022, <br>all rights reserved.<br></h3>
 				</div>
 				<!--Logo-->
 				<div class="footer2">
-					<img style="width: 100%; max-width: 7.3vw; padding-top: 2.5vw;" src="images/placeholder.png" alt="logo">
+					<img style="width: 100%; max-width: 7.3vw; padding-top: 2.5vw;" src="images/logo.png" alt="logo">
 				</div>
 				<!--Social Media Icons-->
 				<div class="footer3">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
+					<a href ="https://www.facebook.com/profile.php?id=100085114878181"><img class="social-icons" src="images/fb.png" alt="Social Media Icon"></a>
+					<a href ="https://www.instagram.com/tuneinweb/"><img class="social-icons" style="padding-left: 0.6vw;" src="images/instagram.png" alt="Social Media Icon"></a>
+					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Social Media Icon"></a>
 				</div>
 				<!--Back to top button-->
-				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				<div id="myBtn" onclick="topFunction()"><img src="images/top.png" style="width: 100%; max-width: 3.65vw;"></div>
 			</div>	
 		</center>
 		
