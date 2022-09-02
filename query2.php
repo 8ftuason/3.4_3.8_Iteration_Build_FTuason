@@ -24,6 +24,9 @@
 		<meta name="Author" content="Faith Tuason"/>
 		<meta name="Description" content="TuneIn Query 2 Page"/>
 		
+		<!-- favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		
 		<!-- import the webpage's stylesheet goes here -->
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/grids.css">
@@ -42,7 +45,7 @@
 			?>
 			
 			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
-			<center><div class="banner">
+			<center><div class="banner" style="background-image: url('images/query2.jpg'); background-size: 100vw 95.77vh">
 				<h1 style="padding-top: 14vw; font-size: 4.8vw; color: white;">QUERY 2</h1>
 				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">All Songs sorted by Genre and  Artist(s) A - Z</h2>
 				
@@ -62,7 +65,10 @@
 								{	
 								?>
 								<!--php is above. HTML is below. Used to output the query results-->
-								<center><h3><?php echo $output['Total_Time']; ?></h3></center>
+								<center>
+									<img style="width: 100%; max-width: 15px;" src="images/clock.png" alt="Clock Icon">
+									<h3 style="margin-top: 0; padding-left: 5px; display: inline-block"><?php echo $output['Total_Time']; ?></h3>
+								</center>
 				
 								<?php
 								//closes the output while loop
@@ -133,16 +139,16 @@
 				</div>
 				<!--Logo-->
 				<div class="footer2">
-					<img style="width: 100%; max-width: 7.3vw; padding-top: 2.5vw;" src="images/placeholder.png" alt="logo">
+					<img style="width: 100%; max-width: 7.3vw; padding-top: 2.5vw;" src="images/logo.png" alt="logo">
 				</div>
 				<!--Social Media Icons-->
 				<div class="footer3">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
-					<img style="width: 100%; max-width: 3.65vw; padding-top: 4.4vw; padding-left: 1.5vw;" src="images/placeholder.png" alt="Social Media Icon">
+					<a href ="https://www.facebook.com/profile.php?id=100085114878181"><img class="social-icons" src="images/fb.png" alt="Social Media Icon"></a>
+					<a href ="https://www.instagram.com/tuneinweb/"><img class="social-icons" style="padding-left: 0.6vw;" src="images/instagram.png" alt="Social Media Icon"></a>
+					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Social Media Icon"></a>
 				</div>
 				<!--Back to top button-->
-				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				<div id="myBtn" onclick="topFunction()"><img src="images/top.png" style="width: 100%; max-width: 3.65vw;"></div>
 			</div>
 		</center>
 	</body>
