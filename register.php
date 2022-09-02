@@ -13,6 +13,9 @@
 		<meta name="Author" content="Faith Tuason"/>
 		<meta name="Description" content="TuneIn Sign Up Page"/>
 		
+		<!-- favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		
 		<!-- import the webpage's stylesheet goes here -->
 		<link rel="stylesheet" href="css/style.css">
 		
@@ -24,7 +27,7 @@
 		
 	</head>
 	
-	<body>	
+	<body style="background-image: url(images/register-background.jpg);">	
 		<!-- navigation menu -->
 			<?php
 			  require("nav.php");
@@ -43,7 +46,7 @@
 					$insertquery = "INSERT INTO Users( User_PK, Password ) VALUES( '$UserID', '$PW' )";
 				?>
 			<center>
-				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
+				<img style="width: 100%; max-width: 200px;" src="images/profile-icon.png" alt="Profile graphic">
 				<h1>REGISTER</h1>
 				<form method = "post" id="add_user">
 				<!-- input box for the user to enter their username -->
