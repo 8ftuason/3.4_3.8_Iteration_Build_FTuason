@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-			<title>TuneIn - Update User</title>
+			<title>TuneIn | Update User</title>
 		
 			<!-- import code needed for site to be responsive -->
 			<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,10 @@
 			<meta name="Keywords" content="html5, layout, Responsive Design"/>
 			<meta name="Author" content="Faith Tuason"/>
 			<meta name="Description" content="TuneIn Admin - Update User Details Page"/>
-
+			
+			<!-- favicon -->
+			<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+			
 			<!-- import the webpage's stylesheet goes here -->
 			<link rel="stylesheet" href="css/style.css">
 
@@ -32,7 +35,7 @@
 			<script src="js/backtotop.js" defer></script>
 		</head>
 	
-        <body>
+        <body style="background-image: url(images/admin-background.jpg);">
             <!-- navigation menu-->
 			<?php
 			  require("nav.php");
@@ -51,7 +54,7 @@
 										$updatequery = "UPDATE Users SET User_PK = '$NewUserID' WHERE User_PK = '$ExistingUserID'";
 									?>
 									<center>
-										<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
+										<img style="width: 100%; max-width: 200px;" src="images/profile-icon.png" alt="Profile graphic">
 										<h1>UPDATE USER DETAILS</h1>
 										<form method="post" id="update_user.php">
 											<!-- input box for the user to enter their exsisting username -->

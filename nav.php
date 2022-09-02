@@ -6,7 +6,7 @@ if(isset($_SESSION['login_user'])){
 
 <!-- This is for my navigation menu with links to all my pages-->
 <nav class="navbar">
-	<a href="index.php"><img style="width: 100%; max-width: 50px; margin: .5rem;" src="images/placeholder.png" alt="TuneIn logo"></a>
+	<a href="index.php"><img style="width: 100%; max-width: 50px; margin: .5rem;" src="images/logo.png" alt="TuneIn logo"></a>
 	<!-- This is for when my navigation menu transitions into a burger menu for smaller screens-->
 	<a href="#" class="toggle-button">
 		<span class="bar"></span>
@@ -15,7 +15,8 @@ if(isset($_SESSION['login_user'])){
 	</a>
 	<div class="navbar-links">
 		<ul>
-			<li><a style="font-weight: 700;"><?php echo ($_SESSION['login_user'])?></a></li>
+			<li><a style="display: inline-block; font-weight: 700;"><?php echo ($_SESSION['login_user'])?></a></li>
+			<li2><a>|</a></li2>
 			<li class="hover-underline-animation"><a href="index.php">Home</a></li>
 			<li class="hover-underline-animation"><a href>Playlists</a>
 				<ul>
@@ -44,7 +45,7 @@ if(isset($_SESSION['login_user'])){
 ?>
 
 <nav class="navbar">
-	<a href="index.php"><img style="width: 100%; width: 50px; margin: .5rem;" src="images/placeholder.png" alt="TuneIn logo"></a>
+	<a href="index.php"><img style="width: 100%; max-width: 50px; margin: .5rem;" src="images/logo.png" alt="TuneIn logo"></a>
 	<a href="#" class="toggle-button">
 		<span class="bar"></span>
 		<span class="bar"></span>

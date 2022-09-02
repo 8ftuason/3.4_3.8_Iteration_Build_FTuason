@@ -36,7 +36,7 @@
 	 
 	<head>
 	 
-		<title>TuneIn - Login</title>
+		<title>TuneIn | Login</title>
 		
 		<!-- import code needed for site to be responsive -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,7 +44,10 @@
 		<!-- import keywords for search engines -->
 		<meta name="Keywords" content="html5, layout, Responsive Design"/>
 		<meta name="Author" content="Faith Tuason"/>
-		<meta name="Description" content="TuneIn Homepage"/>
+		<meta name="Description" content="TuneIn Login"/>
+		
+		<!-- favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 		
 		<!-- import the webpage's stylesheet goes here -->
 		<link rel="stylesheet" href="css/style.css">
@@ -57,17 +60,17 @@
 		
 	</head>
 	
-	<body>	
+	<body style="background-image: url(images/login-background.jpg);">	
 		
 		<!-- navigation menu-->
 		<?php
 		  require("nav.php");
-		?>
+		?> 
 
 		<!-- This class is for my main content-->	
 		<div class="admin-content">
 			<center>
-				<img style="width: 100%; max-width: 200px;" src="images/placeholder.png" alt="Profile graphic">
+				<img style="width: 100%; max-width: 200px;" src="images/profile-icon.png" alt="Profile graphic">
 				<h1>LOGIN</h1>
 				<form method = "post" id="login">
 				<!-- input box for the user to enter their username -->

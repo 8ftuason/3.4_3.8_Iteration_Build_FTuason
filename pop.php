@@ -14,7 +14,7 @@
 	 
 	<head>
 	 
-		<title>TuneIn | Query 2</title>
+		<title>TuneIn | Pop</title>
 		
 		<!-- import code needed for site to be responsive -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +22,7 @@
 		<!-- import keywords for search engines -->
 		<meta name="Keywords" content="html5, layout, Responsive Design"/>
 		<meta name="Author" content="Faith Tuason"/>
-		<meta name="Description" content="TuneIn Query 2 Page"/>
+		<meta name="Description" content="TuneIn Pop Genre"/>
 		
 		<!-- favicon -->
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -45,41 +45,17 @@
 			?>
 			
 			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
-			<center><div class="banner" style="background-image: url('images/query2.jpg'); background-size: 100vw 95.77vh">
-				<h1 style="padding-top: 14vw; font-size: 4.8vw; color: white;">QUERY 2</h1>
-				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">All Songs sorted by Genre and  Artist(s) A - Z</h2>
-				
-				
-							<?php
-								//connect.php (tells where to connect servername, username, password, dbaseName)
-								require "3.3_Assessment_FTuason_mysqli.php";
-					
-								//creates a variable to store the sql query that calculates the total time of the playlist
-								$query = ("SELECT SEC_TO_TIME(SUM(s.Duration)) AS Total_Time
-								FROM Song_Details AS s");
-					
-								//runs and stores the query using the variables $con (see nav.php) and $query
-								$result = mysqli_query($conn,$query);
-								//runs in a 'while' loop
-								while($output=mysqli_fetch_array($result))
-								{	
-								?>
-								<!--php is above. HTML is below. Used to output the query results-->
-								<center>
-									<img style="width: 100%; max-width: 15px;" src="images/clock.png" alt="Clock Icon">
-									<h3 style="margin-top: 0; padding-left: 5px; display: inline-block"><?php echo $output['Total_Time']; ?></h3>
-								</center>
-				
-								<?php
-								//closes the output while loop
-								}
-								?>
+			<center><div class="banner" style="background-image: url('images/pop-banner.jpg'); background-size: 100vw 95.77vh">
+				<h1 style="padding-top: 14vw; font-size: 4.8vw; color: white;">POP</h1>
+				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">All Hit Pop Songs</h2>
+				<img style="width: 100%; max-width: 15px;" src="images/clock.png" alt="Clock Icon">
+				<h3 style="margin-top: 0; padding-left: 5px; display: inline-block">01:32:46</h3>
 			</div></center>
 
 			<!-- This class is for my main content-->	
 			<div class="content"> 
-				
-						<!-- Playlist headings-->
+						
+						<!-- Playlist headings-->	
                         <heading1>
                                 <Song_ID1 style="padding-right: 120px;"><h3 style="color: white;">#</h3></Song_ID1>
                                 <Title1><h3>TITLE</h3></Title1>
@@ -88,13 +64,13 @@
 								<Genre1><h3>GENRE</h3></Genre1>
 								<Duration1><h3>SECS</h3></Duration1>
                                 <Size1><h3>SIZE</h3></Size1>
-						</heading1>            
+                        </heading1>            
 				
                         	<?php
 								require "3.3_Assessment_FTuason_mysqli.php";
 					
-								//creates a variable to store the sql query that displayed all song info sorted by genre then artist (both lowest first)
-								$query = ("SELECT s.Song_ID, s.Title, s.Duration, s.Size, 
+								//creates a variable to store the sql query that displayed all song info sorted by title then artist (both highest first)
+								$query = ("SELECT s.Song_ID, s.Title, s.Duration, s.Size,
 								GROUP_CONCAT(DISTINCT a.Album SEPARATOR ', ') AS Album,
 								GROUP_CONCAT(DISTINCT r.Artist SEPARATOR ', ') AS Artist,
 								GROUP_CONCAT(DISTINCT g.Genre SEPARATOR ', ') AS Genre
@@ -104,16 +80,26 @@
 								JOIN Artist r ON r.Artist_PK = j.Artist_PK
 								JOIN SongToGenre t ON s.Song_ID = t.Song_ID
 								JOIN Genre g ON g.Genre_PK = t.Genre_PK
+								WHERE g.Genre = 'Pop' 
+								OR g.Genre = 'Brit Pop'
+								OR g.Genre = 'Dance' 
+								OR g.Genre = 'Goa Trance' 
+								OR g.Genre = 'Indie'
+								OR g.Genre = 'Soul' 
+								OR g.Genre = 'New Wave' 
+								OR g.Genre = 'New Age' 
+								OR g.Genre = 'R&B' 
 								GROUP BY s.Song_ID
-								ORDER BY Genre ASC, Artist ASC");
-					
+								ORDER BY Song_ID ASC");
+
 								//runs and stores the query using the variables $con (see nav.php) and $query
 								$result = mysqli_query($conn,$query);
 								//runs in a 'while' loop
 								while($output=mysqli_fetch_array($result))
 								{	
-							?>
-							<!--php is above. HTML is below. Used to output the query results-->
+								?>
+				
+								<!--php is above. HTML is below. Used to output the query results-->
 								<heading2>
 									<Song_ID2 style="padding-left: 0.4vw;"><p><?php echo $output['Song_ID']; ?></p></Song_ID2>
 									<Title2><p><?php echo $output['Title']; ?></p></Title2>
@@ -129,7 +115,7 @@
 								?>
 				 
 			</div>
-			
+		
 		<center>
 			<!-- This class is for my footer-->	
 			<div class="footer">
