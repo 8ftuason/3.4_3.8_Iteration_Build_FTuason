@@ -56,6 +56,15 @@ body{
 	font-weight: 600;
 }
 
+.navbar-links li2 a{
+	text-decoration: none;
+	padding: 1rem;
+	display: block;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+}
+
 .navbar-links ul li ul {
   margin-top: 0px;
   padding: 0;
@@ -149,6 +158,10 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
 		text-align: center;
 	}
 	
+	.navbar-links li2{
+		display: none;
+	}
+	
 	.navbar-links ul li ul {
 		position: relative;
 	}
@@ -160,8 +173,19 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
 }
 /*style for nav menu ends*/
 
-/* style for image banner - used in home and query playlist pages */
+/* style for image banner - used in query playlist pages */
 .banner{
+	margin-top: -3.2vw;
+	padding: 0;
+	background-color: grey;
+	height: 95.77vh;
+	width: 100%;
+	position: relative;
+    z-index: -1;
+}
+
+/*style for slideshow banner starts - used in homepage*/
+#slideshow{
 	margin-top: -3.2vw;
 	padding: 0;
 	background-color: grey;
@@ -171,13 +195,19 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
     z-index: -1;
 }
 
+#slideshow div{
+	position: absolute;
+	width: 100%;	
+}
+/*style for slideshow banner ends*/
+
 /* style for main content */
 .content{
 	box-sizing: border-box;
 	background-color: #292a33;
 	padding: 0 20px;
 	display: block;
-	margin: 15px auto;
+	margin: 2.4vh auto;
 	width: 100%;
 	max-width: 955px;
 	height: 75.95vh;
@@ -188,7 +218,7 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
 /* style for main content on login/register and admin pages */
 .admin-content{
 	box-sizing: border-box;
-	margin: 100px auto;
+	margin: 8vh auto;
 	position: relative;
 	background-color: #ffffff;
 	padding: 25px;
@@ -289,6 +319,43 @@ input[type=submit]:hover {
   transform-origin: bottom left;
 }
 
+.container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+
+.library-image{
+	width: 100%; 
+	max-width: 400px; 
+	height: 100%
+}
+
+.container:hover .library-image{
+  opacity: 0.3;
+  transition: 0.5s;
+}
+
+.genre-image{
+	width: 100%; 
+	max-width: 235px;
+	height: 100%
+}
+
+.container:hover .genre-image{
+  opacity: 0.3;
+  transition: 0.5s;
+}
+
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*style for headers start*/
 h1{
 	font-family: 'Montserrat', sans-serif;
@@ -331,18 +398,15 @@ p{
   position: fixed; /* Fixed/sticky position */
   bottom: 5px; /* Place the button at the bottom of the page */
   right: 5px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  background-color:  white; 
-  color: #527ECC; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
-  border: none;
-  border-radius: 5px;
 }
 
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-  opacity: 0.8;
+#myBtn:hover img{
+  transform: scale(1.1, 1.1);
+  transition: 0.5s;
+  cursor: pointer; /* Add a mouse pointer on hover */
+	
 }
 
 /*style for footer starts*/
@@ -385,3 +449,8 @@ p{
 	grid-column: 4;
 }
 /*style for footer ends*/
+
+.social-icons{
+	width: 100%; 
+	max-width: 3.65vw; 
+	padding-top: 4.4vw;}
