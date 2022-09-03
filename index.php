@@ -47,7 +47,7 @@
 		
 		<center>
 			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
-			<div class="banner" style="background-image: url('images/query1.jpg'); background-size: 100vw 95.77vh">
+			<div class="banner" style="background-image: url('images/home-banner.jpg'); background-size: 100vw 100vh; background-attachment: fixed;">
 				<h1 style="padding-top: 35vh; font-size: 4.8vw; color: white;">Discover new music.</h1>
 				<h2 style="margin-top: -2.64vh; font-size: 1.75vw;">Tune in to your favourite songs by your favourite artists today</h2>
 			</div>
@@ -57,16 +57,14 @@
 				<!-- All users 'saved playlists' (will be linked images in later stages)-->
 				<h1 style="color: white;">Your Library</h1>
 				<div class="container" style="margin: 25px;">
-					<div class="overlay"></div>
-					<a href = "query1.php"><img class="library-image" src="images/allsongs.jpg" alt="Query 1">
+					<a href = "query1.php"><img class="library-image" src="images/allsongs1.jpg" style="border-radius: 50%;" alt="Query 1">
 					<div class="centered">
 						<h1 style="color: white; text-shadow: none;">QUERY 1</h1>
 					</div></a>
 				</div>
 				
 				<div class="container" style="margin: 25px;">
-					<div class="overlay"></div>
-					<a href = "query2.php"><img class="library-image" src="images/allsongs.jpg" alt="Query 2">
+					<a href = "query2.php"><img class="library-image" src="images/allsongs2.jpg" style="border-radius: 50%;" alt="Query 2">
 					<div class="centered">
 						<h1 style="color: white; text-shadow: none;">QUERY 2</h1>
 					</div></a>
@@ -74,25 +72,24 @@
 				
 				<!-- Recommended Genres (will be linked images in later stages)-->
 				<h1 style="color: white;">Genres</h1>
+				
 				<div class="container" style="margin: 32px;">
-					<div class="overlay"></div>
-					<a href = "rock.php"><img class="genre-image" src="images/rock.jpg" alt="Rock Genre">
+					<a href = "rock.php"><img class="genre-image" src="images/rock2.jpg" style="border-radius: 50%;" alt="Rock Genre">
 					<div class="centered">
 						<h1 style="color: white; text-shadow: none;">ROCK</h1>
 					</div></a>
 				</div>
 				
 				<div class="container" style="margin: 32px;">
-					<div class="overlay"></div>
-					<a href = "country.php"><img class="genre-image" src="images/country.jpg" alt="Country Genre">
+					<a href = "country.php"><img class="genre-image" src="images/country2.jpg" style="border-radius: 50%;" alt="Country Genre">
 					<div class="centered">
 						<h1 style="color: white; text-shadow: none;">COUNTRY</h1>
 					</div></a>
+									
 				</div>
 				
 				<div class="container" style="margin: 32px;">
-					<div class="overlay"></div>
-					<a href = "pop.php"><img class="genre-image" src="images/pop.jpg" alt="Pop Genre">
+					<a href = "pop.php"><img class="genre-image" src="images/pop2.jpg" style="border-radius: 50%;" alt="Pop Genre">
 					<div class="centered">
 						<h1 style="color: white; text-shadow: none;">POP</h1>
 					</div></a>
