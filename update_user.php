@@ -54,7 +54,7 @@
 										$updatequery = "UPDATE Users SET User_PK = '$NewUserID' WHERE User_PK = '$ExistingUserID'";
 									?>
 									<center>
-										<img style="width: 100%; max-width: 200px;" src="images/profile-icon.png" alt="Profile graphic">
+										<img style="width: 100%; max-width: 200px;" src="images/update-icon.png" alt="Profile graphic">
 										<h1>UPDATE USER DETAILS</h1>
 										<form method="post" id="update_user.php">
 											<!-- input box for the user to enter their exsisting username -->
