@@ -23,6 +23,7 @@ body{
     display: none;
 }
 
+
 /*style for nav menu starts*/
 .navbar{
 	box-sizing: border-box;
@@ -184,22 +185,6 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
     z-index: -1;
 }
 
-/*style for slideshow banner starts - used in homepage*/
-#slideshow{
-	margin-top: -3.2vw;
-	padding: 0;
-	background-color: grey;
-	height: 600px;
-	width: 100%;
-	position: relative;
-    z-index: -1;
-}
-
-#slideshow div{
-	position: absolute;
-	width: 100%;	
-}
-/*style for slideshow banner ends*/
 
 /* style for main content */
 .content{
@@ -323,7 +308,7 @@ input[type=submit]:hover {
   position: relative;
   display: inline-block;
   text-align: center;
-  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 
@@ -334,7 +319,7 @@ input[type=submit]:hover {
 }
 
 .container:hover .library-image{
-  opacity: 0.3;
+  transform: scale(1.1, 1.1);
   transition: 0.5s;
 }
 
@@ -345,7 +330,7 @@ input[type=submit]:hover {
 }
 
 .container:hover .genre-image{
-  opacity: 0.3;
+  transform: scale(1.1, 1.1);
   transition: 0.5s;
 }
 
