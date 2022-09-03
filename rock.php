@@ -45,7 +45,7 @@
 			?>
 			
 			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
-			<center><div class="banner" style="background-image: url('images/rock-banner.jpg'); background-size: 100vw 95.77vh">
+			<center><div class="banner" style="background-image: url('images/rock-banner.jpg'); background-size: 100vw 100vh; background-attachment: fixed;">
 				<h1 style="padding-top: 14vw; font-size: 4.8vw; color: white;">ROCK</h1>
 				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">All The Best Rock Music In One</h2>
 				<img style="width: 100%; max-width: 15px;" src="images/clock.png" alt="Clock Icon">
