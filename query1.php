@@ -32,19 +32,28 @@
 		<link rel="stylesheet" href="css/grids.css">
 		
 		<!-- import the webpage's javascript -->
+		<!-- loader javascript -->
+		<script src="js/loader.js" defer></script>
 		<!-- nav javascript -->
 		<script src="js/nav.js" defer></script>
 		<!-- back to top button javascript -->
 		<script src="js/backtotop.js" defer></script>
+		
 	</head>
 	
     <body>
+			<!-- customised page preloader -->
+			<div class="loading-area" id="loadingArea">
+				<div class="zoom-in-out-box"><img src="images/logo.png" style="width: 100%;" alt="TuneIn logo"></div>
+			</div>
+		
 			<!-- navigation menu -->
 			<?php
 			  require("nav.php");
 			?>
 			
 			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
+			<!-- banner uses the parallax scrolling effect (for background image) -->
 			<center><div class="banner" style="background-image: url('images/query1-banner.jpg'); background-size: 100vw 100vh; background-attachment: fixed;">
 				<h1 style="padding-top: 14vw; font-size: 4.8vw; color: white;">QUERY 1</h1>
 				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">All Songs sorted by Title and Artist(s) Z-A</h2>
@@ -143,9 +152,9 @@
 				</div>
 				<!--Social Media Icons-->
 				<div class="footer3">
-					<a href ="https://www.facebook.com/profile.php?id=100085114878181"><img class="social-icons" src="images/fb.png" alt="Social Media Icon"></a>
-					<a href ="https://www.instagram.com/tuneinweb/"><img class="social-icons" style="padding-left: 0.6vw;" src="images/instagram.png" alt="Social Media Icon"></a>
-					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Social Media Icon"></a>
+					<a href ="https://www.facebook.com/profile.php?id=100085114878181"><img class="social-icons" src="images/fb.png" alt="Facebook Icon"></a>
+					<a href ="https://www.instagram.com/tuneinweb/"><img class="social-icons" style="padding-left: 0.6vw;" src="images/instagram.png" alt="Instagram Icon"></a>
+					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Twitter Icon"></a>
 				</div>
 				<!--Back to top button-->
 				<div id="myBtn" onclick="topFunction()"><img src="images/top.png" style="width: 100%; max-width: 3.65vw;"></div>
