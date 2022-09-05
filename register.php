@@ -20,6 +20,8 @@
 		<link rel="stylesheet" href="css/style.css">
 		
 		<!-- import the webpage's javascript -->
+		<!-- loader javascript -->
+		<script src="js/loader.js" defer></script>
 		<!-- nav javascript -->
 		<script src="js/nav.js" defer></script>
 		<!-- show password javascript -->
@@ -27,11 +29,16 @@
 		
 	</head>
 	
-	<body style="background-image: url(images/register-background2.jpg);">	
+	<body style="background-image: url(images/register-background.jpg);">	
+		<!-- customised page preloader -->
+		<div class="loading-area" id="loadingArea">
+			<div class="zoom-in-out-box"><img src="images/logo.png" style="width: 100%;" alt="TuneIn logo"></div>
+		</div>
+		
 		<!-- navigation menu -->
-			<?php
-			  require("nav.php");
-			?>
+		<?php
+		  require("nav.php");
+		?>
 		
 		<!-- This class is for my main content-->	
 		<div class="admin-content">
@@ -46,7 +53,7 @@
 					$insertquery = "INSERT INTO Users( User_PK, Password ) VALUES( '$UserID', '$PW' )";
 				?>
 			<center>
-				<img style="width: 100%; max-width: 200px;" src="images/add-icon.png" alt="Profile graphic">
+				<img style="padding-top: 5px; width: 100%; max-width: 200px;" src="images/add-icon.png" alt="Profile graphic">
 				<h1>REGISTER</h1>
 				<form method = "post" id="add_user">
 				<!-- input box for the user to enter their username -->
