@@ -21,12 +21,17 @@
 			<meta name="Keywords" content="html5, layout, Responsive Design"/>
 			<meta name="Author" content="Faith Tuason"/>
 			<meta name="Description" content="TuneIn Admin - User List Page"/>
-
+			
+			<!-- favicon -->
+			<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+			
 			<!-- import the webpage's stylesheet goes here -->
 			<link rel="stylesheet" href="css/style.css">
 			<link rel="stylesheet" href="css/grids.css">
 			
 			<!-- import the webpage's javascript -->
+			<!-- loader javascript -->
+			<script src="js/loader.js" defer></script>
 			<!-- nav javascript -->
 			<script src="js/nav.js" defer></script>
 			<!-- back to top button javascript -->
@@ -34,7 +39,12 @@
 		</head>
 	
         <body>
-            <!-- navigation menu-->
+            <!-- customised page preloader -->
+			<div class="loading-area" id="loadingArea">
+				<div class="zoom-in-out-box"><img src="images/logo.png" style="width: 100%;" alt="TuneIn logo"></div>
+			</div>
+			
+			<!-- navigation menu-->
 			<?php
 			  require("nav.php");
 			?>
