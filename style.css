@@ -19,10 +19,71 @@ body{
 	padding: 0;
 }
 
+/*hide scrollbar*/
 ::-webkit-scrollbar {
     display: none;
 }
 
+/*style for preloader starts*/
+.loading-area{
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(#1155CC, #527ECC);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loading-area.done{
+	animation: loadingDone 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes loadingDone {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0; 
+	display: none;
+	z-index: -1000;
+  }
+}
+/*style for loader*/
+.zoom-in-out-box {
+  width: 80px;
+  height: 80px;
+  animation: zoom-in-zoom-out 2s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.logo{
+  padding-left: 5px;
+}
+
+.logo:hover{
+  transform: scale(1.1, 1.1);
+  transition: 0.5s;
+}
+/*style for preloader ends*/
 
 /*style for nav menu starts*/
 .navbar{
@@ -172,6 +233,7 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
 		display: flex;
 	}
 }
+
 /*style for nav menu ends*/
 
 /* style for image banner - used in query playlist pages */
@@ -304,14 +366,17 @@ input[type=submit]:hover {
   transform-origin: bottom left;
 }
 
+/*style for images in main content on homepage starts*/
 .container {
   position: relative;
   display: inline-block;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
+/*style for images under 'Your Library'*/
 .library-image{
 	width: 100%; 
 	max-width: 400px; 
@@ -319,10 +384,11 @@ input[type=submit]:hover {
 }
 
 .container:hover .library-image{
-  transform: scale(1.1, 1.1);
+  opacity: 0.85;
   transition: 0.5s;
 }
 
+/*style for images under 'Genres'*/
 .genre-image{
 	width: 100%; 
 	max-width: 235px;
@@ -330,16 +396,18 @@ input[type=submit]:hover {
 }
 
 .container:hover .genre-image{
-  transform: scale(1.1, 1.1);
+  opacity: 0.85;
   transition: 0.5s;
 }
 
+/*centers text on images*/
 .centered{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/*style for images in main content on homepage ends*/
 
 /*style for headers start*/
 h1{
@@ -377,22 +445,6 @@ p{
 	font-size: 1.1vw;
 }
 
-/* style for back to top button*/
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 5px; /* Place the button at the bottom of the page */
-  right: 5px; /* Place the button 30px from the right */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-}
-
-#myBtn:hover img{
-  transform: scale(1.1, 1.1);
-  transition: 0.5s;
-  cursor: pointer; /* Add a mouse pointer on hover */
-	
-}
 
 /*style for footer starts*/
 .footer{
@@ -433,9 +485,30 @@ p{
 	grid-row: 1;
 	grid-column: 4;
 }
-/*style for footer ends*/
 
 .social-icons{
 	width: 100%; 
 	max-width: 3.65vw; 
 	padding-top: 4.4vw;}
+
+.social-icons:hover{
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+/* style for back to top button*/
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 5px; /* Place the button at the bottom of the page */
+  right: 5px; /* Place the button 30px from the right */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+}
+
+#myBtn:hover img{
+  transform: scale(1.1, 1.1);
+  transition: 0.5s;
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+/*style for footer ends*/
