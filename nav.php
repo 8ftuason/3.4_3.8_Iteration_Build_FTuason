@@ -46,7 +46,7 @@ if(isset($_SESSION['login_user'])){
 ?>
 
 <nav class="navbar">
-	<a href="index.php"><img style="width: 100%; max-width: 50px; margin: .5rem;" src="images/logo.png" alt="TuneIn logo"></a>
+	<a href="index.php"><img class= "logo" src="images/logo.png" style="width: 100%; max-width: 60px; margin: .5rem;" alt="TuneIn logo"></a>
 	<a href="#" class="toggle-button">
 		<span class="bar"></span>
 		<span class="bar"></span>
