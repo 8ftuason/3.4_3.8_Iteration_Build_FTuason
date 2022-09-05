@@ -53,14 +53,22 @@
 		<link rel="stylesheet" href="css/style.css">
 		
 		<!-- import the webpage's javascript -->
+		<!-- loader javascript -->
+		<script src="js/loader.js" defer></script>
 		<!-- nav javascript -->
 		<script src="js/nav.js" defer></script>
 		<!-- show password javascript -->
 		<script src="js/showpword.js" defer></script>
 		
+		
 	</head>
 	
-	<body style="background-image: url(images/login-background2.jpg);">	
+	<body style="background-image: url(images/login-background.jpg);">	
+		
+		<!-- customised page preloader -->
+		<div class="loading-area" id="loadingArea">
+			<div class="zoom-in-out-box"><img src="images/logo.png" style="width: 100%;" alt="TuneIn logo"></div>
+		</div>
 		
 		<!-- navigation menu-->
 		<?php
@@ -70,7 +78,7 @@
 		<!-- This class is for my main content-->	
 		<div class="admin-content">
 			<center>
-				<img style="width: 100%; max-width: 200px;" src="images/login-icon.png" alt="Profile graphic">
+				<img style="padding-top: 5px; width: 100%; max-width: 200px;" src="images/login-icon.png" alt="Login Profile graphic">
 				<h1>LOGIN</h1>
 				<form method = "post" id="login">
 				<!-- input box for the user to enter their username -->
