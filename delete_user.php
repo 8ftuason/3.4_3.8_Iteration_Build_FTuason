@@ -52,7 +52,7 @@
 										$deletequery = "DELETE FROM Users WHERE User_PK = '$UserID'";
 									?>
 									<center>
-										<img style="width: 100%; max-width: 200px;" src="images/profile-icon.png" alt="Profile graphic">
+										<img style="width: 100%; max-width: 200px;" src="images/delete-icon.png" alt="Profile graphic">
 										<h1>DELETE USER DETAILS</h1>
                                         <form method = "post" id = "delete_user.php" >
 											<!-- input box for Graeme to enter the username he wishes to delete-->

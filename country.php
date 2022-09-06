@@ -35,21 +35,62 @@
 		<!-- nav javascript -->
 		<script src="js/nav.js" defer></script>
 		<!-- back to top button javascript -->
-		<script src="js/backtotop.js" defer></script>
+		<script src="js/backtotop.js" defer></script>	
+		
 	</head>
 	
     <body>
+		
 			<!-- navigation menu -->
 			<?php
 			  require("nav.php");
 			?>
 			
 			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
-			<center><div class="banner" style="background-image: url('images/country-banner.jpg'); background-size: 100vw 95.77vh">
+			<!-- banner uses the parallax scrolling effect (for background image) -->
+			<center><div class="banner" style="background-image: url('images/country-banner.jpg'); background-size: 100vw 100vh; background-attachment: fixed;">
 				<h1 style="padding-top: 18vw; font-size: 4.8vw; color: white;">COUNTRY</h1>
 				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">All Country And Acoustic Songs</h2>
-				<img style="width: 100%; max-width: 15px;" src="images/clock.png" alt="Clock Icon">
-				<h3 style="margin-top: 0; padding-left: 5px; display: inline-block">01:32:24</h3>
+				
+				<?php
+					//connect.php (tells where to connect servername, username, password, dbaseName)
+					require "3.3_Assessment_FTuason_mysqli.php";
+					
+					//creates a variable to store the sql query that calculates the total time of the playlist
+					$query = ("SELECT SEC_TO_TIME(SUM(s.Duration)) AS Total_Time
+					FROM Song_Details AS s
+
+					INNER JOIN Album a ON s.Album_PK = a.Album_PK
+					JOIN SongToArtist j ON s.Song_ID = j.Song_ID
+					JOIN Artist r ON r.Artist_PK = j.Artist_PK
+					JOIN SongToGenre t ON s.Song_ID = t.Song_ID
+					JOIN Genre g ON g.Genre_PK = t.Genre_PK
+
+					WHERE g.Genre = 'Country' 
+					OR g.Genre = 'Folk Country' 
+					OR g.Genre = 'Acoustic'
+					OR g.Genre = 'Bluegrass' 
+					OR g.Genre = 'Easy Listening'
+					OR g.Genre = 'Mellow'
+					OR g.Genre = 'Vocal'");
+
+					//runs and stores the query using the variables $con (see nav.php) and $query
+					$result = mysqli_query($conn,$query);
+					//runs in a 'while' loop
+					while($output=mysqli_fetch_array($result))
+					{	
+					?>
+					<!--php is above. HTML is below. Used to output the query results-->
+					<center>
+						<img style="width: 100%; max-width: 15px;" src="images/clock.png" alt="Clock Icon">
+						<h3 style="margin-top: 0; padding-left: 5px; display: inline-block"><?php echo $output['Total_Time']; ?></h3>
+					</center>
+				
+					<?php
+					//closes the output while loop
+					}
+					?>
+		
 			</div></center>
 
 			<!-- This class is for my main content-->	
@@ -127,9 +168,9 @@
 				</div>
 				<!--Social Media Icons-->
 				<div class="footer3">
-					<a href ="https://www.facebook.com/profile.php?id=100085114878181"><img class="social-icons" src="images/fb.png" alt="Social Media Icon"></a>
-					<a href ="https://www.instagram.com/tuneinweb/"><img class="social-icons" style="padding-left: 0.6vw;" src="images/instagram.png" alt="Social Media Icon"></a>
-					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Social Media Icon"></a>
+					<a href ="https://www.facebook.com/profile.php?id=100085114878181"><img class="social-icons" src="images/fb.png" alt="Facebook Icon"></a>
+					<a href ="https://www.instagram.com/tuneinweb/"><img class="social-icons" style="padding-left: 0.6vw;" src="images/instagram.png" alt="Instagram Icon"></a>
+					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Twitter Icon"></a>
 				</div>
 				<!--Back to top button-->
 				<div id="myBtn" onclick="topFunction()"><img src="images/top.png" style="width: 100%; max-width: 3.65vw;"></div>

@@ -60,7 +60,7 @@
 		
 	</head>
 	
-	<body style="background-image: url(images/login-background.jpg);">	
+	<body style="background-image: url(images/login-background2.jpg);">	
 		
 		<!-- navigation menu-->
 		<?php
@@ -70,7 +70,7 @@
 		<!-- This class is for my main content-->	
 		<div class="admin-content">
 			<center>
-				<img style="width: 100%; max-width: 200px;" src="images/profile-icon.png" alt="Profile graphic">
+				<img style="width: 100%; max-width: 200px;" src="images/login-icon.png" alt="Profile graphic">
 				<h1>LOGIN</h1>
 				<form method = "post" id="login">
 				<!-- input box for the user to enter their username -->

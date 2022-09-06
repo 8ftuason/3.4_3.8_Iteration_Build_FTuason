@@ -56,7 +56,7 @@
 										$insertquery = "INSERT INTO Users( User_PK, Password ) VALUES( '$UserID', '$PW' )";
 									?>
 									<center>
-										<img style="width: 100%; max-width: 200px;" src="images/profile-icon.png" alt="Profile graphic">
+										<img style="width: 100%; max-width: 200px;" src="images/add-icon.png" alt="Profile graphic">
 										<h1>ADD USER</h1>
 										<form method = "post" id="add_user">
 										<!-- input box for the user to enter their username -->
