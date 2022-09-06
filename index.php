@@ -31,6 +31,8 @@
 		<link rel="stylesheet" href="css/style.css">
 		
 		<!-- import the webpage's javascript -->
+		<!-- loader javascript -->
+		<script src="js/loader.js" defer></script>
 		<!-- nav javascript -->
 		<script src="js/nav.js" defer></script>
 		<!-- back to top button javascript -->
@@ -39,7 +41,13 @@
 	</head>
 	
 	<body>	
+				
+		<!-- customised page preloader -->
+		<div class="loading-area" id="loadingArea">
+			<div class="zoom-in-out-box"><img src="images/logo.png" style="width: 100%;" alt="TuneIn logo"></div>
+		</div>
 		
+				
 		<!-- navigation menu-->
 		<?php
 		  require("nav.php");
@@ -47,6 +55,7 @@
 		
 		<center>
 			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
+			<!-- banner uses the parallax scrolling effect (for background image) -->
 			<div class="banner" style="background-image: url('images/home-banner.jpg'); background-size: 100vw 100vh; background-attachment: fixed;">
 				<h1 style="padding-top: 35vh; font-size: 4.8vw; color: white;">Discover new music.</h1>
 				<h2 style="margin-top: -2.64vh; font-size: 1.75vw;">Tune in to your favourite songs by your favourite artists today</h2>
@@ -56,42 +65,42 @@
 			<div class="content" style="height: 100%;">
 				<!-- All users 'saved playlists' (will be linked images in later stages)-->
 				<h1 style="color: white;">Your Library</h1>
-				<div class="container" style="margin: 25px;">
-					<a href = "query1.php"><img class="library-image" src="images/allsongs1.jpg" style="border-radius: 50%;" alt="Query 1">
+				<div class="container" style="margin: 25px; height: 200px;">
+					<a href = "query1.php"><img class="library-image" src="images/query1-cover.jpg" style="border-radius: 5px;" alt="Query 1">
 					<div class="centered">
-						<h1 style="color: white; text-shadow: none;">QUERY 1</h1>
+						<h1 style="color: white; text-shadow: none;" class='hover-underline-animation'>QUERY 1</h1>
 					</div></a>
 				</div>
 				
-				<div class="container" style="margin: 25px;">
-					<a href = "query2.php"><img class="library-image" src="images/allsongs2.jpg" style="border-radius: 50%;" alt="Query 2">
+				<div class="container" style="margin: 25px; height: 200px;">
+					<a href = "query2.php"><img class="library-image" src="images/query2-cover.jpg" style="border-radius: 5px;" alt="Query 2">
 					<div class="centered">
-						<h1 style="color: white; text-shadow: none;">QUERY 2</h1>
+						<h1 style="color: white; text-shadow: none;" class='hover-underline-animation'>QUERY 2</h1>
 					</div></a>
 				</div>
 				
 				<!-- Recommended Genres (will be linked images in later stages)-->
 				<h1 style="color: white;">Genres</h1>
 				
-				<div class="container" style="margin: 32px;">
-					<a href = "rock.php"><img class="genre-image" src="images/rock2.jpg" style="border-radius: 50%;" alt="Rock Genre">
+				<div class="container" style="margin: 32px; height: 235px;">
+					<a href = "rock.php"><img class="genre-image" src="images/rock-cover.jpg" style="border-radius: 5px;" alt="Rock Genre">
 					<div class="centered">
-						<h1 style="color: white; text-shadow: none;">ROCK</h1>
+						<h1 style="color: white; text-shadow: none;" class='hover-underline-animation'>ROCK</h1>
 					</div></a>
 				</div>
 				
-				<div class="container" style="margin: 32px;">
-					<a href = "country.php"><img class="genre-image" src="images/country2.jpg" style="border-radius: 50%;" alt="Country Genre">
+				<div class="container" style="margin: 32px; height: 235px;">
+					<a href = "country.php"><img class="genre-image" src="images/country-cover.jpg" style="border-radius: 5px;" alt="Country Genre">
 					<div class="centered">
-						<h1 style="color: white; text-shadow: none;">COUNTRY</h1>
+						<h1 style="color: white; text-shadow: none;" class='hover-underline-animation'>COUNTRY</h1>
 					</div></a>
 									
 				</div>
 				
-				<div class="container" style="margin: 32px;">
-					<a href = "pop.php"><img class="genre-image" src="images/pop2.jpg" style="border-radius: 50%;" alt="Pop Genre">
+				<div class="container" style="margin: 32px; height: 235px;">
+					<a href = "pop.php"><img class="genre-image" src="images/pop-cover.jpg" style="border-radius: 5px;" alt="Pop Genre">
 					<div class="centered">
-						<h1 style="color: white; text-shadow: none;">POP</h1>
+						<h1 style="color: white; text-shadow: none;" class='hover-underline-animation'>POP</h1>
 					</div></a>
 				</div>
 						
@@ -109,9 +118,9 @@
 				</div>
 				<!--Social Media Icons-->
 				<div class="footer3">
-					<a href ="https://www.facebook.com/profile.php?id=100085114878181"><img class="social-icons" src="images/fb.png" alt="Social Media Icon"></a>
-					<a href ="https://www.instagram.com/tuneinweb/"><img class="social-icons" style="padding-left: 0.6vw;" src="images/instagram.png" alt="Social Media Icon"></a>
-					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Social Media Icon"></a>
+					<a href ="https://www.facebook.com/profile.php?id=100085114878181"><img class="social-icons" src="images/fb.png" alt="Facebook Icon"></a>
+					<a href ="https://www.instagram.com/tuneinweb/"><img class="social-icons" style="padding-left: 0.6vw;" src="images/instagram.png" alt="Instagram Icon"></a>
+					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Twitter Icon"></a>
 				</div>
 				<!--Back to top button-->
 				<div id="myBtn" onclick="topFunction()"><img src="images/top.png" style="width: 100%; max-width: 3.65vw;"></div>

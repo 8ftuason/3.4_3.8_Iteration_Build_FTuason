@@ -29,14 +29,23 @@
 			<link rel="stylesheet" href="css/style.css">
 
 			<!-- import the webpage's javascript -->
+			<!-- loader javascript -->
+			<script src="js/loader.js" defer></script>
 			<!-- nav javascript -->
 			<script src="js/nav.js" defer></script>
 			<!-- back to top button javascript -->
 			<script src="js/backtotop.js" defer></script>
+			
 		</head>
 	
         <body style="background-image: url(images/admin-background.jpg);">
-            <!-- navigation menu-->
+            
+			<!-- customised page preloader -->
+			<div class="loading-area" id="loadingArea">
+				<div class="zoom-in-out-box"><img src="images/logo.png" style="width: 100%;" alt="TuneIn logo"></div>
+			</div>
+			
+			<!-- navigation menu-->
 			<?php
 			  require("nav.php");
 			?>
@@ -52,7 +61,7 @@
 										$deletequery = "DELETE FROM Users WHERE User_PK = '$UserID'";
 									?>
 									<center>
-										<img style="width: 100%; max-width: 200px;" src="images/delete-icon.png" alt="Profile graphic">
+										<img style="padding-top: 5px; width: 100%; max-width: 200px;" src="images/delete-icon.png" alt="Delete Profile graphic">
 										<h1>DELETE USER DETAILS</h1>
                                         <form method = "post" id = "delete_user.php" >
 											<!-- input box for Graeme to enter the username he wishes to delete-->

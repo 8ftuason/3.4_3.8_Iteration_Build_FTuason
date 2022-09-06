@@ -29,14 +29,23 @@
 			<link rel="stylesheet" href="css/style.css">
 
 			<!-- import the webpage's javascript -->
+			<!-- loader javascript -->
+			<script src="js/loader.js" defer></script>
 			<!-- nav javascript -->
 			<script src="js/nav.js" defer></script>
 			<!-- back to top button javascript -->
 			<script src="js/backtotop.js" defer></script>
+			
 		</head>
 	
         <body style="background-image: url(images/admin-background.jpg);">
-            <!-- navigation menu-->
+            
+			<!-- customised page preloader -->
+			<div class="loading-area" id="loadingArea">
+				<div class="zoom-in-out-box"><img src="images/logo.png" style="width: 100%;" alt="TuneIn logo"></div>
+			</div>
+			
+			<!-- navigation menu-->
 			<?php
 			  require("nav.php");
 			?>
@@ -54,7 +63,7 @@
 										$updatequery = "UPDATE Users SET User_PK = '$NewUserID' WHERE User_PK = '$ExistingUserID'";
 									?>
 									<center>
-										<img style="width: 100%; max-width: 200px;" src="images/update-icon.png" alt="Profile graphic">
+										<img style="padding-top: 5px; width: 100%; max-width: 200px;" src="images/update-icon.png" alt="Profile graphic">
 										<h1>UPDATE USER DETAILS</h1>
 										<form method="post" id="update_user.php">
 											<!-- input box for the user to enter their exsisting username -->
