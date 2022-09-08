@@ -14,11 +14,7 @@ if(isset($_SESSION['login_user'])){
 		<span class="bar"></span>
 	</a>
 	<div class="navbar-links">
-		<ul>
-			<li><img style="margin-top: 10px; width: 100%; max-width: 30px;" src="images/profile.png" alt="Profile Icon"></li>
-			<li><a style="display: inline-block; font-weight: 700;"><?php echo ($_SESSION['login_user'])?></a></li>
-			<li2><a>|</a></li2>
-			<li class="hover-underline-animation"><a href="index.php">Home</a></li>
+		<ul>			
 			<li class="hover-underline-animation"><a href>Playlists</a>
 				<ul>
 					<li class="hover-underline-animation"><a href="query1.php">Query 1</a></li>
@@ -26,7 +22,7 @@ if(isset($_SESSION['login_user'])){
 				</ul>
 				<?php
 					//if the admin logs in (Graeme) then it the nav will show an additional link to the admin settings pages
-                    if ($_SESSION["login_user"] == "Graeme"){
+                    if ($_SESSION["login_user"] == "Graeme" or $_SESSION["login_user"] == "graeme"){
                     	echo"<li class='hover-underline-animation'><a href>Admin Settings</a>
 							<ul>
 								<li class='hover-underline-animation'><a href='user_list.php'>User List</a></li> 
@@ -36,6 +32,9 @@ if(isset($_SESSION['login_user'])){
 							</ul>
 						</li>";
                     }?>
+			<li class="hide"><a style="margin-right: 10px;">|</a></li>
+			<li class="hide"><img style="margin-top: 10px; width: 100%; max-width: 30px;" src="images/profile.png" alt="Profile Icon"></li>
+			<li class="hide"><a style="display: inline-block; font-weight: 700;"><?php echo ($_SESSION['login_user'])?></a></li>
 			<li class="hover-underline-animation"><a href='logout.php'>Logout</a></li>
 		</ul>
 	</div>
