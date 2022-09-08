@@ -49,7 +49,7 @@
 			  require("nav.php");
 			?>
 			
-                                <div class="admin-content" style="background-color: #292a33; padding: 0; height: 350px; overflow-y: auto; 
+                                <div class="admin-content" style="background-color: #292a33; padding: 0; height: 56vh; overflow-y: auto; 
 	overflow-x: hidden;"><!-- holds the main page content -->
 								<heading3><!-- This class is to split the content in half and places the usernames to the left-->
 									<User1><h3 style="color: white;">USERNAME</h3></User1>
