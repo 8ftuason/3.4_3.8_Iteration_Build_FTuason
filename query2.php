@@ -51,11 +51,13 @@
 			  require("nav.php");
 			?>
 			
-			<!-- banner class to establish what the site is about and what further content may entail (will be an image in later stages)-->
+			<!-- image banner class to establish what the site is about and what further content may entail-->
 			<!-- banner uses the parallax scrolling effect (for background image) -->
-			<center><div class="banner" style="background-image: url('images/query2-banner.jpg'); background-size: 100vw 100vh; background-attachment: fixed;">
-				<h1 style="padding-top: 14vw; font-size: 4.8vw; color: white;">QUERY 2</h1>
-				<h2 style="margin-top: -1.5vw; font-size: 1.75vw;">All Songs sorted by Genre and  Artist(s) A - Z</h2>
+			<div class="center">
+				<div class="banner" style="background-image: url('images/query2-banner.jpg'); background-size: 100vw 100vh; background-attachment: fixed;">
+				<div class="text-overlay">
+					<h1 style="font-size: 4.8vw; color: white;">QUERY 2</h1>
+					<h2 style="text-align: center; margin-top: -1.5vw; font-size: 1.75vw;">All Songs sorted by Genre and  Artist(s) A - Z</h2>
 				
 				
 							<?php
@@ -73,19 +75,20 @@
 								{	
 								?>
 								<!--php is above. HTML is below. Used to output the query results-->
-								<center>
-									<img style="width: 100%; max-width: 15px;" src="images/clock.png" alt="Clock Icon">
-									<h3 style="margin-top: 0; padding-left: 5px; display: inline-block"><?php echo $output['Total_Time']; ?></h3>
-								</center>
+								<div class="center" style="text-align: center;">
+									<img class="clock-icon" src="images/clock.png" alt="Clock Icon">
+									<h3 class="total-time"><?php echo $output['Total_Time']; ?></h3>
+								</div>
 				
 								<?php
 								//closes the output while loop
 								}
 								?>
-			</div></center>
+				</div>
+			</div></div>
 
 			<!-- This class is for my main content-->	
-			<div class="content"> 
+			<div class="content" style="text-align: left;"> 
 				
 						<!-- Playlist headings-->
                         <heading1>
@@ -138,7 +141,7 @@
 				 
 			</div>
 			
-		<center>
+		<div class="center">
 			<!-- This class is for my footer-->	
 			<div class="footer">
 				<!--Copyright statement-->
@@ -156,8 +159,8 @@
 					<a href ="https://twitter.com/TuneInMusicWeb"><img class="social-icons" style="padding-left: 1.4vw;" src="images/twitter.png" alt="Twitter Icon"></a>
 				</div>
 				<!--Back to top button-->
-				<div id="myBtn" onclick="topFunction()"><img src="images/top.png" style="width: 100%; max-width: 3.65vw;"></div>
+				<div id="myBtn" onclick="topFunction()"><img src="images/top.png" style="width: 100%; max-width: 3.65vw;" alt="back to top button"></div>
 			</div>
-		</center>
+		</div>
 	</body>
 </html>
