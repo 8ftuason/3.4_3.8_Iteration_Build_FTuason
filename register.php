@@ -52,8 +52,8 @@
 					//creates a variable to store sql code for the 'add users' query which will add the user's details (username and password) to my Users table in phpMyAdmin
 					$insertquery = "INSERT INTO Users( User_PK, Password ) VALUES( '$UserID', '$PW' )";
 				?>
-			<center>
-				<img style="padding-top: 5px; width: 100%; max-width: 200px;" src="images/add-icon.png" alt="Profile graphic">
+			<div class="center" style="text-align: center;">
+				<img src="images/add-icon.png" class="admin-icons" alt="Profile graphic">
 				<h1>REGISTER</h1>
 				<form method = "post" id="add_user">
 				<!-- input box for the user to enter their username -->
@@ -75,7 +75,7 @@
 					}
 				?>
 				<p><a class="hover-underline-animation2" style="color: #1155CC; text-decoration: none;" href='login.php'>Back to Login</a></p>
-			</center>			
+			</div>			
 			
 		</div>
 		
