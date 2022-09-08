@@ -6,6 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /*style for body*/
 body{
 	background-color: #292a33;
@@ -19,10 +20,12 @@ body{
 	padding: 0;
 }
 
+
 /*hide scrollbar*/
 ::-webkit-scrollbar {
     display: none;
 }
+
 
 /*style for preloader starts*/
 .loading-area{
@@ -56,13 +59,15 @@ body{
 	z-index: -1000;
   }
 }
-/*style for loader*/
+
+/*style for logo in loader*/
 .zoom-in-out-box {
   width: 80px;
   height: 80px;
   animation: zoom-in-zoom-out 2s ease infinite;
 }
 
+/*style for logo animation in loader*/
 @keyframes zoom-in-zoom-out {
   0% {
     transform: scale(1, 1);
@@ -74,16 +79,26 @@ body{
     transform: scale(1, 1);
   }
 }
+/*style for preloader ends*/
 
+
+/*style for centering content rather tahn using <center> tag in html*/
+.center{
+	justify-content: center;
+}
+
+
+/*style for logo in nav*/
 .logo{
   padding-left: 5px;
 }
 
+/*expands logo in nav when hovered on*/
 .logo:hover{
   transform: scale(1.1, 1.1);
   transition: 0.5s;
 }
-/*style for preloader ends*/
+
 
 /*style for nav menu starts*/
 .navbar{
@@ -112,16 +127,7 @@ body{
 .navbar-links li a{
 	text-decoration: none;
 	padding: 1rem;
-	display: block;
-	color: #ffffff;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-}
-
-.navbar-links li2 a{
-	text-decoration: none;
-	padding: 1rem;
-	display: block;
+	display: inline-block;
 	color: #ffffff;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
@@ -220,7 +226,7 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
 		text-align: center;
 	}
 	
-	.navbar-links li2{
+	.navbar-links li.hide{
 		display: none;
 	}
 	
@@ -236,15 +242,28 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
 
 /*style for nav menu ends*/
 
+
 /* style for image banner - used in query playlist pages */
 .banner{
 	margin-top: -3.2vw;
 	padding: 0;
 	background-color: grey;
-	height: 95.77vh;
-	width: 100%;
+	height: 50.35vw;
+	width: 100vw;
 	position: relative;
     z-index: -1;
+}
+ 
+/* style for clock icon and total time output on image banner */
+.clock-icon{
+	width: 100%; 
+	max-width: 1.1vw;
+}
+
+.total-time{
+	margin-top: 0; 
+	padding-left: 5px; 
+	display: inline-block
 }
 
 
@@ -252,11 +271,12 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
 .content{
 	box-sizing: border-box;
 	background-color: #292a33;
-	padding: 0 20px;
+	text-align: center;
+	padding: 0 1.04vw;
 	display: block;
 	margin: 2.4vh auto;
 	width: 100%;
-	max-width: 955px;
+	max-width: 70vw;
 	height: 75.95vh;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -270,10 +290,17 @@ a:hover {text-shadow: 0.05vw 0.05vw 0.05vw #527ECC;} /* mouse over link */
 	background-color: #ffffff;
 	padding: 25px;
 	display: block;
-	max-width: 555px;
+	max-width: 38.54vw;
 	width: 100%;
 	height: 100%;
 	border-radius: 5px;
+}
+
+/* style for profile icons on each admin page*/
+.admin-icons{
+	padding-top: 5px; 
+	width: 100%; 
+	max-width: 13.9vw;
 }
 
 /* custom style for input boxes start*/
@@ -370,6 +397,7 @@ input[type=submit]:hover {
 .container {
   position: relative;
   display: inline-block;
+  justify-content: center;
   text-align: center;
   border-radius: 6px;
   background-color: white;
@@ -378,9 +406,11 @@ input[type=submit]:hover {
 
 /*style for images under 'Your Library'*/
 .library-image{
+	justify-content: center;
 	width: 100%; 
-	max-width: 400px; 
-	height: 100%
+	max-width: 27.8vw; 
+	height: 100%;
+	max-height: 14.65vw; 
 }
 
 .container:hover .library-image{
@@ -390,9 +420,11 @@ input[type=submit]:hover {
 
 /*style for images under 'Genres'*/
 .genre-image{
+	justify-content: center;
 	width: 100%; 
-	max-width: 235px;
-	height: 100%
+	max-width: 16.32vw;
+	height: 100%;
+	max-height: 16.32vw;
 }
 
 .container:hover .genre-image{
@@ -401,13 +433,15 @@ input[type=submit]:hover {
 }
 
 /*centers text on images*/
-.centered{
+.text-overlay{
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 /*style for images in main content on homepage ends*/
+
 
 /*style for headers start*/
 h1{
@@ -427,7 +461,6 @@ h2{
 	color: #ffffff;
 	font-size: 1.8vw;
 }	
-
 
 h3{
 	font-family: 'Montserrat', sans-serif;
@@ -450,8 +483,9 @@ p{
 .footer{
 	display: grid;
 	grid-template-columns: 20vw 20vw 20vw 25vw 15vw;
-	grid-template-rows: 44vh;
-	padding-top: 7.5vw;
+	grid-template-rows: 16.8vw;
+	margin-top: 7vh;
+	padding-top: 4vw;
 	position: relative;
 	background-image: linear-gradient(#527ECC, #1155CC);
 }
@@ -459,8 +493,9 @@ p{
 /*for copyright section*/
 .footer1{
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 0 1.04vw;
 	width: 100%;
+	text-align: center;
 	height: 28vh;
 	grid-row: 1;
 	grid-column: 2;
@@ -469,7 +504,8 @@ p{
 /*for logo section*/
 .footer2{
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 0 1.04vw;
+	text-align: center;
 	width: 100%;
 	height: 28vh;
 	grid-row: 1;
@@ -481,6 +517,7 @@ p{
 	box-sizing: border-box;
 	display: inline-block;
 	width: 100%;
+	text-align: center;
 	height: 28vh;
 	grid-row: 1;
 	grid-column: 4;

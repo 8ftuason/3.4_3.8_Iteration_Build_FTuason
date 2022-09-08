@@ -21,7 +21,7 @@
 				$_SESSION['login_user'] = $myusername;
 				header("location: index.php");
 			} 
-			if($myusername == "Graeme") {
+			if($myusername == "Graeme" or $myusername == "graeme") {
 				header("location: user_list.php");
 			} else {
 				//error message if the user enters an invalid username or password.
@@ -77,8 +77,8 @@
 
 		<!-- This class is for my main content-->	
 		<div class="admin-content">
-			<center>
-				<img style="padding-top: 5px; width: 100%; max-width: 200px;" src="images/login-icon.png" alt="Login Profile graphic">
+			<div class="center" style="text-align: center;">
+				<img src="images/login-icon.png" class="admin-icons" alt="Login Profile graphic">
 				<h1>LOGIN</h1>
 				<form method = "post" id="login">
 				<!-- input box for the user to enter their username -->
@@ -95,7 +95,7 @@
 				
 				<!--Takes user to register if they don't have an account -->
 				<p><a class="hover-underline-animation2" style="color: #1155CC; text-decoration: none;" href='register.php'>Don't have an account?</a></p>
-			</center>
+			</div>
 		</div>
 		
 	</body>

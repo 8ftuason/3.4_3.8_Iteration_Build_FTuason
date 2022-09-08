@@ -60,8 +60,8 @@
 										//creates a variable to store sql code for the 'delete users' query which will delete the user's details from my Users table in phpMyAdmin
 										$deletequery = "DELETE FROM Users WHERE User_PK = '$UserID'";
 									?>
-									<center>
-										<img style="padding-top: 5px; width: 100%; max-width: 200px;" src="images/delete-icon.png" alt="Delete Profile graphic">
+									<div class="center" style="text-align: center;">
+										<img src="images/delete-icon.png" class="admin-icons" alt="Delete Profile graphic">
 										<h1>DELETE USER DETAILS</h1>
                                         <form method = "post" id = "delete_user.php" >
 											<!-- input box for Graeme to enter the username he wishes to delete-->
@@ -77,7 +77,7 @@
 												$error = "<p style='color: #F73F3F; font-weight: 700;'>ERROR! Unable to delete user. <br> Please Try Again.</p>";
 											}
 										?>
-									</center>
+									</div>
                                 </div>
                                 
                               
