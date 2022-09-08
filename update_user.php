@@ -62,8 +62,8 @@
 										//creates a variable to store sql code for the 'update users' query which will update the user's details (username and password) in my Users table in phpMyAdmin
 										$updatequery = "UPDATE Users SET User_PK = '$NewUserID' WHERE User_PK = '$ExistingUserID'";
 									?>
-									<center>
-										<img style="padding-top: 5px; width: 100%; max-width: 200px;" src="images/update-icon.png" alt="Profile graphic">
+									<div class="center" style="text-align: center;">
+										<img src="images/update-icon.png" class="admin-icons" alt="Profile graphic">
 										<h1>UPDATE USER DETAILS</h1>
 										<form method="post" id="update_user.php">
 											<!-- input box for the user to enter their exsisting username -->
@@ -81,7 +81,7 @@
 												$error = "<p style='color: #F73F3F; font-weight: 700;'>ERROR! Unable to update user details. <br> Please Try Again.</p>";
 											}
 										?>
-									</center>		
+									</div>		
 								</div>
                        
                     
